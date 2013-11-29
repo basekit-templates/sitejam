@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header>
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+</header>
+
+<img src="{{asset('/images/feature.jpg')}}" class="devices">
+
+<div class="wrapper clearfix">
+
+    <div class="responsivecolumns columns-two-25-75">
+
+        <div class="column columns-two-left">
+        
+
+        </div>
+        <div class="column columns-two-right">
+                {{widget('content', 'footercolumn2content1', {"content":"<h2>Beautiful websites for small businesses</h2>"})|raw}}
+                {{widget('content', 'footercolumn2content2', {"content":"<h3>Every site stays beautiful on phones and tablets</h3>"})|raw}}
+
+            {{zone('main')|raw}}
+            
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+{% endblock %}
