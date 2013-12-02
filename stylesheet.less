@@ -1640,8 +1640,10 @@ hr.line.align-right {
     font-family:@font-swatch1-font-family;
     font-size:font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
     color: white;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
    
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
@@ -1686,9 +1688,10 @@ hr.line.align-right {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 12px;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+    border: 0;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
 }
 
 .widget.signupform fieldset input:focus {
