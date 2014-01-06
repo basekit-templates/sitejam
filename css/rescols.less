@@ -1,0 +1,95 @@
+.res-col
+{
+	width: 100%;
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.res-col .column
+{
+	display:block;
+	float:left;
+	min-height: 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.res-col:before,
+.res-col:after {
+  content: " ";
+  display: table;
+}
+.res-col:after {
+  clear: both;
+}
+.res-col {
+  *zoom: 1;
+}
+
+
+/*  ==============================
+	TWO COLUMNS
+	============================== */
+
+	/* === 50 x 50 === */
+
+	.columns {
+		&.span-50-50 {
+			.column {
+				&.span-two-left {
+					width: 50%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+				&.span-two-right {
+					width: 50%;
+					@media @mobile {
+					}
+				}
+			}
+		}
+	}
+
+
+/*  ==============================
+	THREE COLUMNS
+	============================== */
+
+	/* === 30 x 31 x 30 === */
+
+	.columns {
+		&.span-thirds {
+			.column {
+				&.span-third {
+					width: 33.3%;
+				}
+			}
+		}
+	}
+
+
+/*  ==============================
+	FOUR COLUMNS
+	============================== */
+
+	/* === 25 x 4 === */
+
+	.columns {
+		&.span-25x4 {
+			.column {
+				&.span-four {
+					width: 25%;
+				}
+			}
+		}
+	}
+
+
+
+
+

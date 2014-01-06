@@ -2,46 +2,83 @@
 
 {% block content %}
 
+<div class="content">
+
 <header>
-    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+    <div class="wrapper">
+        <div class="res-col columns span-thirds">
+            <div class="column span-third">
+                <h1><img src="{{asset('/images/logo.png')}}"></h1>
+            </div>
+            <div class="column span-third">
+                <nav>
+                    <ul>
+                        <li><a href="/" class="selected">Tour</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="https://basekit.zendesk.com">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column span-third">
+                <ul class="user-btns">
+                    <li><a href="/pricing" class="btn pink">Signup</a></li>
+                    <li><a href="/login" class="btn navy">Login</a></li>
+                </ul>
+            </div>
         </div>
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
 </header>
 
-<img src="{{asset('/images/feature.jpg')}}" class="devices">
-
-<div class="wrapper clearfix">
-
-    <div class="responsivecolumns columns-two-25-75">
-
-        <div class="column columns-two-left">
-        
-
+<section class="feature">
+    <div class="wrapper">
+        <h2>A simple, powerful website creator</h2>
+        <h3>Skip the technical stuff and cut straight to getting your own unique site published now.</h3>
+        <div id="tab-slider">
+            <div class="button-tabs">
+                <a href="#" class="selected">Drag &amp; Drop</a>
+                <a href="#">Domains</a>
+                <a href="#">Colours &amp; Fonts</a>
+            </div>
         </div>
-        <div class="column columns-two-right">
-                {{widget('content', 'footercolumn2content1', {"content":"<h2>Beautiful websites for small businesses</h2>"})|raw}}
-
-                {{widget('content', 'footercolumn2content2', {"content":"<h3>Every site stays beautiful on phones and tablets</h3>"})|raw}}
-
-                {{widget('content', 'footercolumn2content4', {"content":'<a href="https://basekit.zendesk.com/home" target="_blank">Need Help? Contact our support team here</a>'})|raw}}
-
-                {{widget('userregistration', 'userregistration', {'align': 'right'})|raw}}
-
-            {{zone('main')|raw}}
-
-
-            
-        </div>
+        <img src="{{asset('/images/feature-graphic.png')}}"> 
     </div>
+</section>
+
+<section class="intro">
+    <div class="wrapper">
+        <div class="intro-blocks">
+            <div class="res-col columns span-thirds">
+                <div class="column span-third">
+                    <div class="line-block pad-top">
+                        <h2>Publish a free site</h2>
+                        <h3>Publish the first page of your website free. No initial payment or credit card required.</h3>
+                    </div>
+                </div>
+                <div class="column span-third">
+                    <div class="pad-top">
+                        <h2>Use any domain name</h2>
+                        <h3>Your website will work with any domain you already own - or you can buy one from us.</h3>
+                    </div>
+                </div>
+                <div class="column span-third">
+                    <div class="line-block pad-top">
+                        <h2>Expert Support</h2>
+                        <h3>Have a question? Our team of experts will be happy to help with your request.</h3>
+                    <div>
+                </div>
+            </div>
+        <!-- SPARE DIV !-->
+        </div>
+        </div>
+        <!-- SIGNUP BAR !-->
+        <div class="signup-bar">
+            <a href="/pricing" class="btn pink lrg">Signup Free</a>
+            <span>Or, see our <a href="/pricing">pricing list</a></span>
+        </div>
+
+    </div>
+</section>
+
 </div>
-
-div id="page-overlay" class="overlay"><div class="inner"><div class="message">Creating your account, Please wait...</div></div></div>
-
-</div>
-
 
 {% endblock %}
