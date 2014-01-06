@@ -2,7 +2,7 @@
    TYPOGRAPHY
    =============================== */
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
     padding: 0;
     margin: 0;
 }
@@ -25,6 +25,7 @@ h2
     color: @font-swatch2-color;
     letter-spacing: @font-swatch2-letter-spacing;
     padding-bottom: 1em;
+    -webkit-font-smoothing: antialiased;
 }
 
 h3
@@ -45,6 +46,7 @@ h4
     line-height:@font-swatch4-line-height;
     color:@font-swatch4-color;
     letter-spacing: @font-swatch4-letter-spacing;
+    padding-bottom: .8em;
 }
 
 p
@@ -56,3 +58,25 @@ p
     color:@font-swatch5-color;
     letter-spacing: @font-swatch5-letter-spacing;
 }
+
+
+/* ===============================
+   FONT VARIATIONS
+   =============================== */
+
+&.pink {
+    color: @color-swatch3;
+}
+
+&.white {
+    color: @color-swatch1;
+}
+
+&.wht-shad {
+    text-shadow: 0 1px 0 #fff;
+}
+
+
+
+
+
