@@ -33,14 +33,48 @@
     <div class="wrapper">
         <h2>A simple, powerful website creator</h2>
         <h3>Skip the technical stuff and cut straight to getting your own unique site published now.</h3>
-        <div id="tab-slider">
-            <div class="button-tabs">
-                <a href="#" class="selected">Drag &amp; Drop</a>
-                <a href="#">Domains</a>
-                <a href="#">Colours &amp; Fonts</a>
-            </div>
+        <div class="tabs">
+            <input type="radio" name="tabs" checked id="tab1" class="content1">
+                <label for="tab1" style='border-left: 0'>
+                    <span>
+                        <span>Drag &amp; Drop</span>
+                    </span>
+                </label>
+            <input type="radio" name="tabs" id="tab2" class="content2">
+                <label for="tab2">
+                    <span>
+                        <span>Domains</span>
+                    </span>
+                </label>
+            <input type="radio" name="tabs" id="tab3" class="content3">
+                <label for="tab3">
+                    <span>
+                        <span>Colours &amp; Fonts</span>
+                    </span>
+                </label>
+             <ul class="browser">
+                <span></span><span></span><span></span>
+
+                <li class="content1">
+                    <div>
+                            <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
+                        <div class="call-out">
+                            <h4>Drag &amp; Drop</h4>
+                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>
+                        </div>    
+                    </div>
+                </li>
+
+                <li class="content2">
+                    <div>
+                    </div>
+                 </li>
+                <li class="content3">
+                    <div>
+                    </div>
+                </li>                 
+             </ul>
         </div>
-        <img src="{{asset('/images/feature-graphic.png')}}"> 
     </div>
 </section>
 
@@ -110,48 +144,7 @@
                     <h3 class="white">Our professional designers are adding new designs every 2 weeks. <br>Keep your site fresh by changing to a new design at any point.</h3>
                 </div>
 
-                <div class="tabs color2 stack effect4">
-                    <!--TAB 1-->
-                    <input type="radio" name="tabs" checked id="tab1" class="content1">
-                    <label for="tab1" style='border-left: 0'>
-                    <span>
-                    <span>
-                    Electricity
-                    </span>
-                    </span>
-                    </label>
-                    <!--TAB 2-->
-                    <input type="radio" name="tabs" id="tab2" class="content2">
-                    <label for="tab2">
-                    <span>
-                    <span>
-                    da Vinci
-                    </span>
-                    </span>
-                    </label>
-                    <!--CONTENT-->
-                    <ul>
-                        <!--TAB 1-->
-                        <li class="content1">
-                            <div>
-                                <h1>Summary</h1>
-                                <p>
-                                    Electricity is the set of physical phenomena associated with the presence and flow of electric charge. Electricity gives a wide variety of well-known effects.
-                                </p>
-                            </div>
-                        </li>
-                        <!--TAB 2-->
-                        <li class="content2">
-                            <div>
-                                <h1>Other</h1>
-                                <p>
-                                    Leonardo da Vinci was an Italian Renaissance polymath: painter, sculptor, architect, musician, mathematician, engineer, inventor, anatomist, geologist.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
+                
             </section>
         </div>
     </div>

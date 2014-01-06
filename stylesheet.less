@@ -269,33 +269,340 @@ section {
         }
 
         /* TAB SLIDER */
-        #tab-slider {
-            .button-tabs {
-                padding: 3.5em 0;
-                clear: both;
-                a {
-                    background-color: #fff;
-                    font-size: 16px;
-                    color: @color-swatch2;
-                    padding: 13px 28px;
-                    margin: 0 10px;
-                    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-                    box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-                    .border-radius(30px);
-                    &:hover {
-                        background-color: @color-swatch2;
-                        color: @color-swatch1;
-                    }
-                    &.selected {
-                        background-color: @color-swatch2;
-                        color: @color-swatch1;
-                    }
+        
+        tabs {
+            position: relative;
+            font-family: 'tradegothic';
+            color: #FFF;
+
+                input { 
+                    display: none 
                 }
-            }
+
+                label {
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    text-align: left;
+                    margin: 30px 1% 10px;
+                    font-size: 17px;
+                    line-height: 35px;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    background: #FFF;
+                }
+
+                label, label span, label span span {
+                    -webkit-border-radius: 60px;
+                    -moz-border-radius: 60px;
+                    border-radius: 60px;
+                    font-family: 'tradegothic';
+                    text-align: center;
+                }
+
+                label span {
+                    display: block;
+                    padding: 5px;
+                    -webkit-border-radius: 60px;
+                    -moz-border-radius: 60px;
+                    border-radius: 60px; 
+                }
+
+                label span:hover, input:checked +label {
+                    background: #255968;
+                    color: #FFF;
+                }
+
+                label span span {
+                    padding: 0 20px;
+                    background: transparent;
+                    -webkit-transition: background 0.5s ease;
+                    -moz-transition: background 0.5s ease;
+                    -o-transition: background 0.5s ease;
+                    transition: background 0.5s ease;
+                }
+
+                input:checked +label {
+                    cursor: default;
+                }
+
+                ul {
+                    list-style: none;
+                    position: relative;
+                    display: block;
+
+                        h4 {
+                            font-size: 20px;
+                            color: #ff6890;
+                        }
+
+                        p {
+                            font-family: @font-swatch6-font-family;
+                            font-size: @font-swatch6-font-size;
+                            color: @font-swatch6-color;
+                        }
+                        &.browser {
+                            background: #255968;
+                            -webkit-border-top-left-radius: 6px;
+                            -webkit-border-top-right-radius: 6px;
+                            -moz-border-radius-topleft: 6px;
+                            -moz-border-radius-topright: 6px;
+                            border-top-left-radius: 6px;
+                            border-top-right-radius: 6px;
+                            width: 63%;
+                            height: 510px;
+                            min-width: 850px;
+                            margin: 30px auto 0;
+                        }
+
+                        li {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            /*overflow: auto;*/
+                            padding: 25px 0 0;
+                            opacity: 0;
+                            -webkit-transition: background 0.65s ease;
+                            -moz-transition: background 0.65s ease;
+                            -o-transition: background 0.65s ease;
+                            transition: background 0.65s ease;
+                        }
+
+                        span {
+                            &:before {
+                                content: "\00b0";
+                                float: left;
+                                font-size: 22px;
+                                margin: 8px 2px;
+                                color: #03c4cb;
+                                font-weight: 200;
+                            }
+                            &:first-child:before {
+                                margin-left: 12px;
+                            }
+                        }
+
+                        > .content1:checked ~ ul > .content1,
+                        > .content2:checked ~ ul > .content2,
+                        > .content3:checked ~ ul > .content3 {
+                            position: relative;
+                            z-index: 1;
+                            opacity: 1;
+                            -webkit-transform: none;
+                            -moz-transform: none;
+                            -o-transform: none;
+                            transform: none
+                        }
+                        > .content1:checked ~ ul > .content1 {
+                            background-image: image('/images/feature-tab-bg1.jpg');
+                            background-repeat: no-repeat;
+                            background-position: bottom left;
+                            min-width: 100%;
+                            height: 485px;
+                        }
+
+                        .magnify {
+                            float: left;
+                            left: -74px;
+                            top: 102px;
+                        }
+
+                        .call-out {
+                            background : white;
+                            float : left;
+                            text-align: left;
+                            left: 15px;
+                            width: 250px;
+                            padding: 30px;
+                            margin-top: 150px;
+                            position: relative;
+                            border-radius: 8px;
+                                &:before {
+                                    left: -40px;
+                                    top: 50%;
+                                    border: solid transparent;
+                                    content: " ";
+                                    height: 0;
+                                    width: 0;
+                                    position: absolute;
+                                    pointer-events: none;
+                                    border-color: rgba(255, 255, 255, 0);
+                                    border-right-color: #FFF;
+                                    border-width: 20px;
+                                    margin-top: -20px;
+                                }
+                        }
+                }
         }
     }
 }
 
+tabs {
+    position: relative;
+    font-family: 'tradegothic';
+    color: #fff
+}
+
+.tabs input {display: none}
+
+.tabs label {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: left;
+    margin: 30px 1% 10px;
+    font-size: 17px;
+    line-height: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background: #FFF;
+}
+
+.tabs label, tabs label span, tabs label span span {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    font-family: 'tradegothic';
+    text-align: center;
+}
+
+.tabs label span {
+    display: block;
+    padding: 5px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+
+.tabs label span:hover, .tabs input:checked + label {
+    background: #255968;
+    color: #FFF;
+}
+
+.tabs label span span {
+    padding: 0 20px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+}
+
+.tabs input:checked + label { cursor: default }
+
+
+.tabs ul {
+    list-style: none;
+    position: relative;
+    display: block;
+}
+    .tabs ul h4 {
+        font-size: 20px;
+        color: #ff6890;
+    }
+    .tabs ul p {
+        font-family: @font-swatch6-font-family;
+        font-size: @font-swatch6-font-size;
+        color: @font-swatch6-color;
+    }
+    .tabs ul.browser {
+        background: #255968;
+        -webkit-border-top-left-radius: 6px;
+        -webkit-border-top-right-radius: 6px;
+        -moz-border-radius-topleft: 6px;
+        -moz-border-radius-topright: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 63%;
+        height: 510px;
+        min-width: 850px;
+        margin: 30px auto 0;
+    }
+
+.tabs ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*overflow: auto;*/
+    padding: 25px 0 0;
+    opacity: 0;
+    -webkit-transition: background 0.65s ease;
+    -moz-transition: background 0.65s ease;
+    -o-transition: background 0.65s ease;
+    transition: background 0.65s ease;
+}
+    .tabs ul span:before {
+        content: "\00b0";
+        float: left;
+        font-size: 22px;
+        margin: 8px 2px;
+        color: #03c4cb;
+        font-weight: 200;
+    }
+    .tabs ul span:first-child:before {
+        margin-left: 12px;
+    }
+
+.tabs > .content1:checked ~ ul > .content1,
+.tabs > .content2:checked ~ ul > .content2,
+.tabs > .content3:checked ~ ul > .content3,
+.tabs > .content4:checked ~ ul > .content4 {
+  /* ADD MORE AS NEEDED */
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none
+}
+
+.tabs > .content1:checked ~ ul > .content1 {
+    background-image: image('/images/feature-tab-bg1.jpg');
+    background-repeat: no-repeat;
+        background-position: bottom left;
+        min-width: 100%;
+        height: 485px;
+        
+}
+
+.magnify { 
+    float: left;
+    left: -74px;
+    top: 102px;
+}
+
+.call-out {
+    background : white;
+    float : left;
+    text-align: left;
+    left: 15px;
+    width: 250px;
+    padding: 30px;
+    margin-top: 150px;
+    position: relative;
+    border-radius: 8px;
+}
+    .call-out:before {
+        left: -40px;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #FFF;
+        border-width: 20px;
+        margin-top: -20px;
+}
 
 /* ===============================
    INTRO
@@ -395,110 +702,6 @@ section {
             background-image: image('/images/device-bg.jpg');
             background-repeat: no-repeat;
             background-position: right top;
-
-            .tabs {
-                position: relative;
-                font: normal normal 400 0 
-                'Electrolize', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                color: #fff
-            }
-
-            .tabs input {display: none}
-
-            .tabs label {
-                position: relative;
-                z-index: 1;
-                display: inline-block;
-                text-align: left;
-                width: 25%;
-                border: 1px solid #222;
-                border-left-color: #555;
-                font-size: 17px;
-                line-height: 45px;
-                cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none
-            }
-
-            .tabs label span {
-                display: block;
-                padding: 5px;
-                background: #444
-            }
-
-            .tabs label span span {
-                padding: 0 20px;
-                background: transparent;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                -webkit-transition: background 0.4s;
-                -moz-transition: background 0.4s;
-                -o-transition: background 0.4s;
-                transition: background 0.4s
-            }
-
-            .tabs input:checked + label {cursor: default}
-
-
-            .tabs ul {
-                list-style: none;
-                position: relative;
-                display: block;
-                font: normal normal 400 15px 
-                'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
-            }
-
-            .tabs ul li {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                overflow: auto;
-                padding: 25px;
-                background: #444;
-                opacity: 0;
-                -webkit-transition: all .4s;
-                -moz-transition: all .4s;
-                -o-transition: all .4s;
-                transition: all .4s;
-                border: 1px solid #666;
-            }
-
-            .tabs > .content1:checked ~ ul > .content1,
-            .tabs > .content2:checked ~ ul > .content2,
-            .tabs > .content3:checked ~ ul > .content3,
-            .tabs > .content4:checked ~ ul > .content4 {
-              /* ADD MORE AS NEEDED */
-                position: relative;
-                z-index: 1;
-                opacity: 1;
-                -webkit-transform: none;
-                -moz-transform: none;
-                -o-transform: none;
-                transform: none
-            }
-
-            /** COLORS **/
-
-            /* DEFAULT */
-            .color1 label:hover span span, .tabs label:hover span span {background: #232323}
-            .color1 input:checked + label span span, .tabs input:checked + label span span {background: #232323}
-
-            /* BLUE */
-            .color2 label:hover span span {background: #39a1dd}
-            .color2 input:checked + label span span {background: #39a1dd}
-
-            /*** END POSITIONS ***/
-
-            /* EFFECT */
-            .effect4 ul li {
-                -webkit-transform: translateY(-30px); 
-                -moz-transform: translateY(-30px); 
-                -o-transform: translateY(-30px);
-                transform: translateY(-30px)
-            }
 
         }
     }
