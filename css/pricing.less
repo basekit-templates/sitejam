@@ -1,0 +1,110 @@
+/* ===============================
+   PRICING PAGE
+   =============================== */
+
+section {
+    .pricing-table {
+        margin: 5em 0 0;
+        article {
+            position: relative;
+            background-color: @color-swatch2;
+            max-width: 372px;
+            -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.2);
+            box-shadow: 0 0 50px rgba(0,0,0,0.2);
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            h3 {
+                font-size: 26px;
+                padding: 1.2em 0 .8em;
+                color: #fff;
+            }
+            h4 {
+                font-size: 56px;
+                padding-bottom: .9em;
+                span {
+                    font-size: 20px;
+                    color: #9ec6d1;
+                    letter-spacing: 0;
+                    margin-left: 4px;
+                }
+                &.pink {
+                    letter-spacing: -4px;                
+                }
+            }
+            a {
+                position: relative;
+                top: 9px;
+                padding: 20px 48px;
+                font-size: 17px;
+            }
+            &.business {
+                .border-radius(0);
+                .most-popular {
+                    position: absolute;
+                    top: -25px;
+                    width: 100%;
+                    background-color: @color-swatch3;
+                    padding: 6px 0;
+                    -webkit-border-top-left-radius: 5px;
+                    -webkit-border-top-right-radius: 5px;
+                    -moz-border-radius-topleft: 5px;
+                    -moz-border-radius-topright: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    font-family: 'effra';
+                    color: #fff;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+
+section {
+    &.pricing-content {
+        article {
+            max-width: 372px;
+            border: 1px solid #eee;
+            padding: 66px 70px 50px;
+            -webkit-border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            ul {
+                li {
+                    .p-font;
+                    line-height: 40px;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    i {
+                        color: @color-swatch4;
+                        margin-right: 30px;
+                        &.fa {
+                            &.fa-times {
+                                color: #e3e3e3;
+                            }
+                        }
+                    }
+                    &.out {
+                        color: #dedcdc;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

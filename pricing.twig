@@ -1,0 +1,214 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="content">
+
+<header class="clearfix">
+    <div class="wrapper">
+        <div class="left">
+            <h1><img src="{{asset('/images/logo.png')}}"></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/" class="selected">Tour</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="https://basekit.zendesk.com">Support</a></li>
+            </ul>
+        </nav>
+        <div class="right clearfix">
+            <ul class="user-btns">
+                <li><a href="/pricing" class="btn pink">Signup</a></li>
+                <li><a href="/login" class="btn navy">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="feature title-bar">
+    <div class="wrapper">
+        <h2>Simple price plans</h2>
+        <h3>Get a <span>free 1 page</span> website with our <span>launch</span> plan</h3>
+
+        <!-- PRICING TABLE !-->
+        <section class="pricing-table">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    <!-- LAUNCH !-->
+                    <article class="price-block">
+                        <h3>Launch Package</h3>
+                        <h4 class="grey-blue">&pound;0<span>/month</h4>
+                        <a href="#" class="btn blue solid">Get Started</a>
+                    </article>
+                </div>
+                <div class="column span-three-middle">
+                    <!-- BASIC !-->
+                    <article class="price-block">
+                        <h3>Basic Package</h3>
+                        <h4 class="white">&pound;7<span>/month</h4>
+                        <a href="#" class="btn blue solid">Get Started</a>
+                    </article>
+                </div>
+                <div class="column span-three-right">
+                    <!-- BUSINESS !-->
+                    <article class="price-block business">
+                        <div class="most-popular">Most Popular</div>
+                        <h3>Business Package</h3>
+                        <h4 class="pink">&pound;12 <span>/month</h4>
+                        <a href="#" class="btn pink solid">Get Started</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- PRICING CONTENT !-->
+<section class="pricing-content">
+    <div class="wrapper">
+        <div class="res-col columns span-30-31-30">
+            <div class="column span-three-left">
+                <!-- LAUNCH !-->
+                <article class="price-content">
+                    <ul>
+                        <li><i class="fa fa-check"></i>5 Templates</li>
+                        <li><i class="fa fa-check"></i>1 page</li>
+                        <li><i class="fa fa-check"></i>100 Mb storage</li>
+                        <li><i class="fa fa-check"></i>Image editing</li>
+                        <li class="out"><i class="fa fa-times"></i>Free stock images</li>
+                        <li class="out"><i class="fa fa-times"></i>PayPal button</li>
+                        <li class="out"><i class="fa fa-times"></i>Free custom domain</li>
+                        <li class="out"><i class="fa fa-times"></i>Email address</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="column span-three-middle">
+                <!-- BASIC !-->
+                <article class="price-content">
+                    <ul>
+                        <li><i class="fa fa-check"></i>15 Templates</li>
+                        <li><i class="fa fa-check"></i>10 pages</li>
+                        <li><i class="fa fa-check"></i>250 Mb storage</li>
+                        <li><i class="fa fa-check"></i>Image editing</li>
+                        <li><i class="fa fa-check"></i>1 Free Stock Images</li>
+                        <li class="out"><i class="fa fa-times"></i>PayPal button</li>
+                        <li class="out"><i class="fa fa-times"></i>Free custom domain</li>
+                        <li class="out"><i class="fa fa-times"></i>Email address</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="column span-three-right">
+                <!-- BUSINESS !-->
+                <article class="price-content">
+                    <ul>
+                        <li><i class="fa fa-check"></i>31 Templates</li>
+                        <li><i class="fa fa-check"></i>Unlimited pages</li>
+                        <li><i class="fa fa-check"></i>Unlimited storage</li>
+                        <li><i class="fa fa-check"></i>Image editing</li>
+                        <li><i class="fa fa-check"></i>3 Free stock images</li>
+                        <li><i class="fa fa-check"></i>PayPal button</li>
+                        <li><i class="fa fa-check"></i>Free custom domain</li>
+                        <li><i class="fa fa-check"></i>1 Email address</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO !-->
+<section class="intro">
+    <div class="wrapper">
+        <div class="intro-blocks">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    <div class="line-block pad-top">
+                        <h2>Publish a free site</h2>
+                        <h3>Publish the first page of your website free. No initial payment or credit card required.</h3>
+                    </div>
+                </div>
+                <div class="column span-three-middle">
+                    <div class="pad-top">
+                        <h2>Use any domain name</h2>
+                        <h3>Your website will work with any domain you already own - or you can buy one from us.</h3>
+                    </div>
+                </div>
+                <div class="column span-three-right">
+                    <div class="line-block pad-top">
+                        <h2>Expert Support</h2>
+                        <h3>Have a question? Our team of experts will be happy to help with your request.</h3>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SIGNUP BAR !-->
+<div class="signup-bar">
+    <a href="/pricing" class="btn pink lrg">Signup Free</a>
+    <span>or, see our <a href="/pricing">pricing list</a></span>
+</div>
+
+<!-- QUICK SIGNUP !-->
+<section class="quick-signup grey">
+    <div class="wrapper">
+        <form>
+            <fieldset>
+                <div class="inputset">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="inputset">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter your email address">
+                </div>
+                <div class="inputset">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Enter a password">
+                </div>
+                <input type="submit" class="form-submit">
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER !-->
+<footer class="clearfix">
+    <div class="wrapper">
+        <div class="footer-left">
+            <ul>
+                <li><p>© Sitejam {{ "now"|date("Y") }}.</p></li>
+                <li><a href="/">Tour</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="https://basekit.zendesk.com">Support</a></li>
+                <li><a href="/login" class="login">Login</a></li>
+                <li><a href="/pricing" class="signup">Signup</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/termsandconditions">Terms &amp; Conditions</a></li>
+                <li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- CONTENT END !-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
