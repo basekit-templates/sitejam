@@ -356,10 +356,6 @@ section {
                 width: 100%;
                 padding: 25px 0 0;
                 opacity: 0;
-                -webkit-transition: background 0.65s ease;
-                -moz-transition: background 0.65s ease;
-                -o-transition: background 0.65s ease;
-                transition: background 0.65s ease;
             }
             span {
                 &:before {
@@ -435,22 +431,22 @@ section {
     background-image: image('/images/feature-tab-bg1.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    min-width: 100%;
-    height: 485px;      
+    width: 100%;
+    height: 485px;   
 }
 .tabs > .content2:checked ~ ul > .content2 {
     background-image: image('/images/feature-tab-bg1.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    min-width: 100%;
-    height: 485px;      
+    width: 100%;
+    height: 485px;   
 }
 .tabs > .content3:checked ~ ul > .content3 {
     background-image: image('/images/feature-tab-bg1.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    min-width: 100%;
-    height: 485px;      
+    width: 100%;
+    height: 485px;    
 }
 
 /* ===============================
@@ -551,15 +547,18 @@ section {
             background-image: image('/images/device-bg.jpg');
             background-repeat: no-repeat;
             background-position: right top;
+        }
             .tabs-2 {
                 position: relative;   
                 min-height: 464px; /* This part sucks */
                 clear: both;
                 margin: 35px 0 0;
+            }
                 .slide {
                     label {
                         padding: 8px 7px;
-                        border-top: 4px solid pink;
+                        font-family: @font-swatch4-font-family;
+                        border-top: 4px solid #ff6890;
                         position: relative;
                         top: 464px;
                         display: inline-block;
@@ -577,7 +576,7 @@ section {
                     .tab-content {
                         position: absolute;
                         transition: all 0.75s ease;
-                        left: -400px;
+                        left: -125px;
                         width: 100%;
                         padding: 0;
                         opacity: 0;
@@ -592,22 +591,24 @@ section {
                         h4 {
                             margin-top: 60px;
                         }
+                        p {
+                            font-family: @font-swatch5-font-family;
+                            color: @color-swatch1;
+                        }
                         img {
                             position: absolute;
                             bottom: 0;
                         }
                     } /* end tab-content */
                 } /* end slide */
-            } /* end tabs-2 */
-        } /* end devices */
     }
 }
 
-[type=radio]:checked ~ label {
+.tabs-2 [type=radio]:checked ~ label {
   z-index: 2;
   background: #1e4652;
 }
-[type=radio]:checked ~ label ~ .tab-content {
+.tabs-2 [type=radio]:checked ~ label ~ .tab-content {
   z-index: 1;
   opacity: 1;
   left: 0;
