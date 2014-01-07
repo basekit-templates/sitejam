@@ -5,6 +5,7 @@
 @import "@{templateLocal}/css/fonts.less";
 @import "@{templateLocal}/css/typography.less";
 @import "@{templateLocal}/css/rescols.less";
+@import "@{templateLocal}/css/pricing.less";
 
 
 /* ===============================
@@ -12,7 +13,7 @@
    =============================== */
 
 body {
-    /*background-color: #ccc;*/
+    background-color: #e9e9e9;
     /*margin: 0;*/
     margin: 0;
     padding: 0;
@@ -22,8 +23,10 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1700px;
-    min-width: 1024px;
+    /*min-width: 1100px;*/
     background-color: #fff;
+    box-shadow: 0 0 70px rgba(0,0,0,0.02);
+    -webkit-box-shadow: 0 0 70px rgba(0,0,0,0.02);
     height: 100%;
 }
 
@@ -132,6 +135,14 @@ a {
                 background-color: transparent;
                 color: @color-swatch3;
             }
+            &.solid {
+                &:hover {
+                    background-color: lighten(@color-swatch3,4%);
+                    color: @color-swatch1;
+                    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                }
+            }
         }
         &.navy {
             background-color: @color-swatch7;
@@ -140,6 +151,23 @@ a {
                 -webkit-box-shadow: inset 0 0 0 2px @color-swatch7, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
                 background-color: transparent;
                 color: @color-swatch7;
+            }
+        }
+        &.blue {
+            background-color: @color-swatch4;
+            &:hover {
+                box-shadow: inset 0 0 0 2px @color-swatch4, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                -webkit-box-shadow: inset 0 0 0 2px @color-swatch4, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                background-color: transparent;
+                color: @color-swatch4;
+            }
+            &.solid {
+                &:hover {
+                    background-color: lighten(@color-swatch4,1.5%);
+                    color: @color-swatch1;
+                    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                }
             }
         }
         &.lrg {
@@ -163,9 +191,10 @@ a {
    RESPONSIVE QUERIES
    =============================== */
 
-@tablet: ~"only screen and (max-width: 768px)";
-@mobile: ~"only screen and (max-width: 479px)";
-@mobileSml: ~"only screen and (max-width: 349px)";
+@15laptop: ~"only screen and (max-width: 1440px)"; /* 15" Laptop */
+@laptop: ~"only screen and (max-width: 1290px)"; /* Laptops */
+@tablet: ~"only screen and (max-width: 1024px)"; /* Tablet */
+@mobile: ~"only screen and (max-width : 480px), (max-width : 640px)"; /* Mobile */
 
 
 /* ===============================
@@ -186,16 +215,23 @@ header {
     background-color: #fff;
     padding: 1.5em 0;
     border-top: 7px solid @color-swatch7;
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
     h1 {
         position: relative;
         top: 5px;
     }
     nav {
+        float: left;
         ul {
-            float: left;
             padding: 6px 50px;
-            margin: 10px 0 0;
+            margin: 10px 0 0 50px;
             text-align: center;
+            .box-sizing;
             border-left: 1px solid #eeeeee;
             border-right: 1px solid #eeeeee;
             li {
@@ -263,12 +299,16 @@ section {
             font-size: 20px;
             color: #b6fdff;
             line-height: 2em;
+            span {
+                color: #fff;
+                border-bottom: 1px solid #66dee2;
+                padding-bottom: 6px;
+            }
         }
         img {
             position: relative;
             bottom: -4px;
         }
-
     }
 }
 .tabs {
@@ -634,7 +674,6 @@ section {
                         box-shadow: inset 1px 0 0 #fff;
                         -webkit-box-shadow: inset 1px 0 0 #fff;
                         width: 33.333%;
-                        min-width: 178px;
                         min-height: 178px;
                         background-repeat: no-repeat;
                         background-position: center 50px;
@@ -763,9 +802,13 @@ section {
                     background-color: #fff;
                     padding: 13px 20px;
                     label {
+                        float: left;
+                        display: inline-block;
+                        width: 33%;
                         font-family: 'effra';
                         font-size: 18px;
                         color: @color-swatch4;
+                        line-height: 33px;
                     }
                     input {
                         display: inline-block;
@@ -775,6 +818,9 @@ section {
                         font-size: 16px;
                         line-height: 28px;
                         color: @color-swatch5;
+                        &:focus {
+                            outline: none;
+                        }
                     }
                 }
                 .form-submit {

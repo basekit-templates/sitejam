@@ -67,6 +67,31 @@
 		}
 	}
 
+	/* === 30 x 31 x 30 === */
+
+	.columns {
+		&.span-30-31-30 {
+			.column {
+				&.span-three-left,
+				&.span-three-right {
+					width: 29%;
+					@media @mobile {
+					}
+				}
+				&.span-three-middle {
+					width: 30%;
+					margin-left: 5.5%;
+					margin-right: 5.5%;
+					@media @mobile {
+					}
+				}
+				&.span-three-right {
+					margin: 0;
+				}
+			}
+		}
+	}
+
 
 /*  ==============================
 	FOUR COLUMNS
