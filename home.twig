@@ -147,35 +147,31 @@
 
                 <div class="tabs-2">
 
-                        <input type="radio" name="tabs-2" checked id="tab-1" class="content-1">
-                            <label for="tab-1" style='border-left: 0'>
-                                <span>
-                                    <span>Drag &amp; Drop</span>
-                                </span>
-                            </label>
-                        <input type="radio" name="tabs-2" id="tab-2" class="content-2">
-                            <label for="tab-2">
-                                <span>
-                                    <span>Domains</span>
-                                </span>
-                            </label>  
-
-                        <ul class="wrapper sml">
-                <li class="content-1">
-                    <div>
-                            <h4>Drag &amp; Drop</h4>
-                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>  
-                    </div>
-                </li>
-                <li class="content-2">
-                    <div>
-                            <h4>Header 2</h4>
-                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>
-                    </div>
-                 </li>         
-                 </ul>
-                </div>
-
+               <div class="slide">
+                   <input type="radio" id="tab-1" name="tab-group-1" checked>
+                   <label for="tab-1">Mobile</label>
+                   
+                   <div class="tab-content sml">
+                       <h4>Various preview modes</h4>
+                       <p>Lorem ipsum dolor sit amet ala ips
+                        consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                   </div> 
+               </div>
+                
+               <div class="slide">
+                   <input type="radio" id="tab-2" name="tab-group-1">
+                   <label for="tab-2">Tablet</label>
+                   
+                   <div class="tab-content sml">
+                       <h4>Various preview modes</h4>
+                       <p>Lorem ipsum dolor sit amet ala ips
+                        consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                       
+                       <img src="{{asset('images/mobile-img.png')}}">
+                   </div> 
+               </div>
+                
+            </div>
 
 
             </section>

@@ -279,6 +279,7 @@ header {
    =============================== */
 
 section {
+    position: relative;
     &.feature {
         width: 100%;
         padding: 5em 0 0;
@@ -310,15 +311,20 @@ section {
         }
     }
 }
-
 .tabs {
     position: relative;
     font-family: 'tradegothic';
-}
-    .tabs input {
+    input {
         display: none;
+        &:checked + label {
+            background: #255968;
+            color: #FFF;
+            cursor: default;
+        }
     }
-    .tabs label {
+    label {
+        font-family: 'tradegothic';
+        text-align: center;
         position: relative;
         z-index: 1;
         display: inline-block;
@@ -331,123 +337,87 @@ section {
         -moz-user-select: none;
         -ms-user-select: none;
         background: #FFF;
-    }
-    .tabs label, .tabs label span, .tabs label span span {
         -webkit-border-radius: 60px;
         -moz-border-radius: 60px;
         border-radius: 60px;
-        font-family: 'tradegothic';
-        text-align: center;
-    }
-    .tabs label span {
-        display: block;
-        padding: 5px;
-        -webkit-border-radius: 60px;
-        -moz-border-radius: 60px;
-        border-radius: 60px;
-    }
-    .tabs label span:hover, .tabs input:checked + label {
-        background: #255968;
-        color: #FFF;
-    }
-    .tabs label span span {
-        padding: 0 20px;
-        background: transparent;
-        -webkit-transition: background 0.5s ease;
-        -moz-transition: background 0.5s ease;
-        -o-transition: background 0.5s ease;
-        transition: background 0.5s ease;
-    }
-    .tabs input:checked + label { 
-        cursor: default; 
-    }
-    .tabs ul {
-        list-style: none;
-        position: relative;
-        display: block;
-    }
-        .tabs ul h4 {
-            font-size: 20px;
-            color: #ff6890;
+        span {
+            display: block;
+            padding: 5px;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border-radius: 60px;
+            &:hover {
+                background: #255968;
+                color: #FFF;
+            }
         }
-        .tabs ul p {
-            font-family: @font-swatch6-font-family;
-            font-size: @font-swatch6-font-size;
-            color: @font-swatch6-color;
+        span span {
+            padding: 0 20px;
+            background: transparent;
+            -webkit-transition: background 0.5s ease;
+            -moz-transition: background 0.5s ease;
+            -o-transition: background 0.5s ease;
+            transition: background 0.5s ease;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border-radius: 60px;
         }
-        .tabs ul.browser {
-            background: #255968;
-            -webkit-border-top-left-radius: 6px;
-            -webkit-border-top-right-radius: 6px;
-            -moz-border-radius-topleft: 6px;
-            -moz-border-radius-topright: 6px;
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-            width: 63%;
-            height: 510px;
-            min-width: 850px;
-            margin: 30px auto 0;
-        }
-        .tabs ul li {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            /*overflow: auto;*/
-            padding: 25px 0 0;
-            opacity: 0;
-            -webkit-transition: background 0.65s ease;
-            -moz-transition: background 0.65s ease;
-            -o-transition: background 0.65s ease;
-            transition: background 0.65s ease;
-        }
-        .tabs ul span:before {
-            content: "\00b0";
-            float: left;
-            font-size: 22px;
-            margin: 8px 2px;
-            color: #03c4cb;
-            font-weight: 200;
-        }
-        .tabs ul span:first-child:before {
-            margin-left: 12px;
-        }
-        .tabs > .content1:checked ~ ul > .content1,
-        .tabs > .content2:checked ~ ul > .content2,
-        .tabs > .content3:checked ~ ul > .content3 {
+    }
+        ul {
+            list-style: none;
             position: relative;
-            z-index: 1;
-            opacity: 1;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -o-transform: none;
-            transform: none;
-        }
-        .tabs > .content1:checked ~ ul > .content1 {
-            background-image: image('/images/feature-tab-bg1.jpg');
-            background-repeat: no-repeat;
-                background-position: bottom left;
-                min-width: 100%;
-                height: 485px;      
-        }
-        .tabs > .content2:checked ~ ul > .content2 {
-            background-image: image('/images/feature-tab-bg1.jpg');
-            background-repeat: no-repeat;
-                background-position: bottom left;
-                min-width: 100%;
-                height: 485px;      
-        }
-        .tabs > .content3:checked ~ ul > .content3 {
-            background-image: image('/images/feature-tab-bg1.jpg');
-            background-repeat: no-repeat;
-                background-position: bottom left;
-                min-width: 100%;
-                height: 485px;      
-        }
+            display: block;
+            h4 {
+                font-size: 20px;
+                color: #ff6890;
+            }
+            p {
+                font-family: @font-swatch6-font-family;
+                font-size: @font-swatch6-font-size;
+                color: @font-swatch6-color;
+            }
+            &.browser {
+                background: #255968;
+                -webkit-border-top-left-radius: 6px;
+                -webkit-border-top-right-radius: 6px;
+                -moz-border-radius-topleft: 6px;
+                -moz-border-radius-topright: 6px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                width: 63%;
+                height: 510px;
+                min-width: 850px;
+                margin: 30px auto 0;
+            }
+            li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 25px 0 0;
+                opacity: 0;
+                -webkit-transition: background 0.65s ease;
+                -moz-transition: background 0.65s ease;
+                -o-transition: background 0.65s ease;
+                transition: background 0.65s ease;
+            }
+            span {
+                &:before {
+                    content: "\00b0";
+                    float: left;
+                    font-size: 22px;
+                    margin: 8px 2px;
+                    color: #03c4cb;
+                    font-weight: 200;
+                }
+                &:first-child:before {
+                    margin-left: 12px;
+                }
+            }
             .magnify { 
-                float: left;
-                left: -74px;
-                top: 102px;
+                    float: left;
+                    left: -74px;
+                    top: 102px;
             }
             .call-out {
                 float : left;
@@ -472,9 +442,7 @@ section {
                 /* Webkit (Chrome 11+) */ 
                 background-image: -webkit-linear-gradient(bottom, #FFFFFF 70%, #f5f5f5 100%);
                 /* W3C Markup, IE10 Release Preview */ 
-                background-image: linear-gradient(to top, #FFFFFF 70%, #f5f5f5 100%);
-            }
-                .call-out:before {
+                &:before {
                     left: -40px;
                     top: 50%;
                     border: solid transparent;
@@ -488,125 +456,42 @@ section {
                     border-width: 20px;
                     margin-top: -20px;
                 }
+            } /* close callout */
+        } /* close ul */            
+} /* close tabs */
 
-.tabs-2 {
+.tabs > .content1:checked ~ ul > .content1,
+.tabs > .content2:checked ~ ul > .content2,
+.tabs > .content3:checked ~ ul > .content3 {
     position: relative;
-    font-family: 'tradegothic';
+    z-index: 1;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
 }
-    .tabs-2 input {
-        display: none;
-    }
-    .tabs-2 label {
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-        text-align: left;
-        margin: 30px 0 0;
-        font-size: 17px;
-        line-height: 35px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        background: #FFF;
-        width: 50%;
-        border-top: 4px solid pink;
-    }
-    .tabs-2 label, .tabs-2 label span, .tabs-2 label span span {
-        font-family: 'tradegothic';
-        text-align: center;
-    }
-    .tabs-2 label span {
-        display: block;
-        padding: 5px;
-    }
-    .tabs-2 label span:hover, .tabs-2 input:checked + label {
-        background: #255968;
-        color: #FFF;
-    }
-    .tabs-2 label span span {
-        padding: 0 20px;
-        background: transparent;
-        -webkit-transition: background 0.5s ease;
-        -moz-transition: background 0.5s ease;
-        -o-transition: background 0.5s ease;
-        transition: background 0.5s ease;
-    }
-    .tabs-2 input:checked + label { 
-        cursor: default; 
-    }
-    .tabs-2 ul {
-        list-style: none;
-        position: relative;
-        display: block;
-    }
-        .tabs-2 ul h4 {
-            font-size: 20px;
-            color: #ff6890;
-        }
-        .tabs-2 ul p {
-            font-family: @font-swatch6-font-family;
-            font-size: @font-swatch6-font-size;
-            color: @font-swatch6-color;
-        }
-        .tabs-2 ul {
-            -webkit-border-top-left-radius: 6px;
-            -webkit-border-top-right-radius: 6px;
-            -moz-border-radius-topleft: 6px;
-            -moz-border-radius-topright: 6px;
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-            width: 100%;
-            height: 510px;
-            margin: 30px auto 10px;
-        }
-        .tabs-2 ul li {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: auto;
-            padding: 25px 0 0;
-            opacity: 0;
-            -webkit-transition: background 0.65s ease;
-            -moz-transition: background 0.65s ease;
-            -o-transition: background 0.65s ease;
-            transition: background 0.65s ease;
-        }
-        .tabs-2 ul span:before {
-            content: "\00b0";
-            float: left;
-            font-size: 22px;
-            margin: 8px 2px;
-            color: #03c4cb;
-            font-weight: 200;
-        }
-        .tabs-2 ul span:first-child:before {
-            margin-left: 12px;
-        }
-        .tabs-2 > .content-1:checked ~ ul > .content-1,
-        .tabs-2 > .content-2:checked ~ ul > .content-2 {
-            position: relative;
-            z-index: 1;
-            opacity: 1;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -o-transform: none;
-            transform: none;
-        }
-
-        .tabs-2 > .content-1:checked ~ ul > .content-1 {
-            position: relative;
-            z-index: 1;
-            opacity: 1;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -o-transform: none;
-            transform: none;
-        }
-        .tabs-2 > .content-2:checked ~ ul > .content-2 {
-  
-        }
+.tabs > .content1:checked ~ ul > .content1 {
+    background-image: image('/images/feature-tab-bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    min-width: 100%;
+    height: 485px;      
+}
+.tabs > .content2:checked ~ ul > .content2 {
+    background-image: image('/images/feature-tab-bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    min-width: 100%;
+    height: 485px;      
+}
+.tabs > .content3:checked ~ ul > .content3 {
+    background-image: image('/images/feature-tab-bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    min-width: 100%;
+    height: 485px;      
+}
 
 /* ===============================
    INTRO
@@ -706,11 +591,67 @@ section {
             background-image: image('/images/device-bg.jpg');
             background-repeat: no-repeat;
             background-position: right top;
-
-        }
+            .tabs-2 {
+                position: relative;   
+                min-height: 464px; /* This part sucks */
+                clear: both;
+                margin: 35px 0 0;
+                .slide {
+                    label {
+                        padding: 8px 7px;
+                        border-top: 4px solid pink;
+                        position: relative;
+                        top: 464px;
+                        display: inline-block;
+                        line-height: 45px;
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                        background: #2b5460;
+                        color: white;
+                        .box-sizing;
+                    }
+                    [type=radio] {
+                        display: none;    
+                    }
+                    .tab-content {
+                        position: absolute;
+                        transition: all 0.75s ease;
+                        left: -400px;
+                        width: 100%;
+                        padding: 0;
+                        opacity: 0;
+                        height: 100%;
+                        &.sml {
+                            width: 70%;
+                            margin: 0 15%;
+                        }
+                        h4, p {
+                            max-width: 40%;
+                        }
+                        h4 {
+                            margin-top: 60px;
+                        }
+                        img {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    } /* end tab-content */
+                } /* end slide */
+            } /* end tabs-2 */
+        } /* end devices */
     }
 }
 
+[type=radio]:checked ~ label {
+  z-index: 2;
+  background: #1e4652;
+}
+[type=radio]:checked ~ label ~ .tab-content {
+  z-index: 1;
+  opacity: 1;
+  left: 0;
+}
 
 /* ===============================
    WIDGETS
