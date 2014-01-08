@@ -26,6 +26,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="{{asset('/fonts/fontawesome/css/font-awesome.min.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset('/css/resNav.css')}}" />
 
 	{% include basekit.headScript %}
 	
@@ -36,6 +37,15 @@
 	{% endblock %}
 
 	{% include basekit.bodyScript %}
+
+	<!-- RESPONSIVE NAV !-->
+	<script src="{{asset('/js/responsiveNav/modernizr.custom.js')}}"></script>
+	<script src="{{asset('/js/responsiveNav/jquery.dlmenu.js')}}"></script>
+	<script>
+	    $(function() {
+	        $( '#dl-menu' ).dlmenu();
+	    });
+	</script>
 
 </body>
 </html>

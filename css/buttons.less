@@ -1,0 +1,79 @@
+/* ===============================
+   BUTTONS / LINKS
+   =============================== */
+
+a {
+    &.btn {
+        font-family: 'effra';
+        text-transform: uppercase;
+        padding: 14px 20px;
+        color: @color-swatch1;
+        font-size: 15px;
+        letter-spacing: 2px;
+        -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+        @media @tablet {
+            padding: 12px 16px;
+        }
+        &.pink {
+            background-color: @color-swatch3;
+            &:hover {
+                box-shadow: inset 0 0 0 2px @color-swatch3, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                -webkit-box-shadow: inset 0 0 0 2px @color-swatch3, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                background-color: transparent;
+                color: @color-swatch3;
+            }
+            &.solid {
+                &:hover {
+                    background-color: lighten(@color-swatch3,4%);
+                    color: @color-swatch1;
+                    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+        &.navy {
+            background-color: @color-swatch7;
+            &:hover {
+                box-shadow: inset 0 0 0 2px @color-swatch7, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                -webkit-box-shadow: inset 0 0 0 2px @color-swatch7, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                background-color: transparent;
+                color: @color-swatch7;
+            }
+        }
+        &.blue {
+            background-color: @color-swatch4;
+            &:hover {
+                box-shadow: inset 0 0 0 2px @color-swatch4, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                -webkit-box-shadow: inset 0 0 0 2px @color-swatch4, 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                background-color: transparent;
+                color: @color-swatch4;
+            }
+            &.solid {
+                &:hover {
+                    background-color: lighten(@color-swatch4,1.5%);
+                    color: @color-swatch1;
+                    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+        &.lrg {
+            padding: 26px 46px;
+            font-size: 20px;
+            -webkit-font-smoothing: antialiased;
+            -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.05);
+            @media @tablet {
+                padding: 20px 32px;
+                font-size: 18px;
+            }
+        }
+    }
+    &.text-link {
+        font-family: 'tradegothic';
+        font-size: 18px;
+        border-bottom: 1px solid @color-swatch4;
+        padding-bottom: 8px;
+    }
+}

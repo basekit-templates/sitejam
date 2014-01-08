@@ -9,17 +9,25 @@
         <div class="left">
             <h1><img src="{{asset('/images/logo.png')}}"></h1>
         </div>
-        <nav>
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="/" class="selected">Tour</a></li>
                 <li><a href="/pricing">Pricing</a></li>
-                <li><a href="https://basekit.zendesk.com">Support</a></li>
             </ul>
+        </nav>
+        <nav class="nav-mob">
+            <div id="dl-menu" class="dl-menuwrapper">
+                <button class="dl-trigger dl-active">Open Menu</button>
+                <ul class="dl-menu">
+                    <li><a href="/" class="selected">Tour</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="right clearfix">
             <ul class="user-btns">
-                <li><a href="/pricing" class="btn pink">Signup</a></li>
-                <li><a href="/login" class="btn navy">Login</a></li>
+                <li><a href="/pricing" class="btn pink signup">Signup</a></li>
+                <li><a href="/login" class="btn navy login">Login</a></li>
             </ul>
         </div>
     </div>
@@ -28,7 +36,7 @@
 <section class="feature">
     <div class="wrapper">
         <h2>A simple, powerful website creator</h2>
-        <h3>Skip the technical stuff and cut straight to getting your own unique site published now.</h3>
+        <h3>Create a site that looks great on big screens, phones and tablets.</h3>
         <div class="tabs">
             <input type="radio" name="tabs" checked id="tab1" class="content1">
                 <label for="tab1" style='border-left: 0'>
@@ -45,17 +53,17 @@
             <input type="radio" name="tabs" id="tab3" class="content3">
                 <label for="tab3">
                     <span>
-                        <span>Colours &amp; Fonts</span>
+                        <span>Templates</span>
                     </span>
                 </label>
              <ul class="browser">
-                <span></span><span></span><span></span>
+                <div class="controls"><span></span><span></span><span></span></div>
                 <li class="content1">
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
                             <h4>Drag &amp; Drop</h4>
-                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>
+                            <p>Add text, images, movies and all kinds of social content to your page. See how it looks on a phone or tablet instantly. </p>
                         </div>    
                     </div>
                 </li>
@@ -63,8 +71,8 @@
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
-                            <h4>Header 2</h4>
-                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>
+                            <h4>Domains</h4>
+                            <p>Your site will work with any domain name you own. You can also buy a domain name from us or choose our business plan and get a domain for free. </p>
                         </div> 
                     </div>
                  </li>
@@ -72,8 +80,8 @@
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
-                            <h4>Header 3</h4>
-                            <p>One app to handle every aspect of booking. Always lnow who's in your space, what resources are avilable, and what needs your attention.</p>
+                            <h4>Templates</h4>
+                            <p>Only fresh, modern designs are good enough for template library. Our professional designers add new template designs every 2 weeks. Change your template any time to give your site a whole new look.</p>
                         </div> 
                     </div>
                 </li>                 
@@ -89,28 +97,28 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <div class="line-block pad-top">
-                        <h2>Publish a free site</h2>
-                        <h3>Publish the first page of your website free. No initial payment or credit card required.</h3>
+                        <h2>A free one page site</h2>
+                        <h3>Create a site and check it out on your phone and tablet. No credit card required.</h3>
                     </div>
                 </div>
                 <div class="column span-three-middle">
                     <div class="pad-top">
-                        <h2>Use any domain name</h2>
-                        <h3>Your website will work with any domain you already own - or you can buy one from us.</h3>
+                        <h2>Free support</h2>
+                        <h3>Got some questions? Our team of in-house experts have got all the answers.</h3>
                     </div>
                 </div>
                 <div class="column span-three-right">
                     <div class="line-block pad-top">
-                        <h2>Expert Support</h2>
-                        <h3>Have a question? Our team of experts will be happy to help with your request.</h3>
+                        <h2>Use any domain name</h2>
+                        <h3>Select one of our paying plans and use your site with any domain name you like.</h3>
                     <div>
                 </div>
             </div>
         </div>
         <!-- SIGNUP BAR !-->
         <div class="signup-bar">
-            <a href="/pricing" class="btn pink lrg">Signup Free</a>
-            <span>or, see our <a href="/pricing">pricing list</a></span>
+            <a href="/pricing" class="btn pink lrg">try sitejam now</a>
+            <span>No credit card required.</span>
         </div>
     </div>
 </section>
@@ -122,8 +130,8 @@
             <!-- DESIGNS !-->
             <section class="grey designs">
                 <div class="wrapper sml">
-                    <h2 class="wht-shad">Fresh, professional designs</h2>
-                    <h3 class="wht-shad">Our professional designers are adding new designs every 2 weeks. Keep your site fresh by changing to a new design at any point.</h3>
+                    <h2 class="wht-shad">Every site looks great</h2>
+                    <h3 class="wht-shad">Our professional designers make sure that every site is something to be proud of. New designs are released every 2 weeks and included free with our business plan.</h3>
                     <div class="template-slider">
                         <div class="controls">
                             <span></span>
@@ -142,31 +150,29 @@
             <section class="devices">
                 <div class="wrapper sml">
                     <h2 class="pink">Mobile &amp; tablet site included</h2>
-                    <h3 class="white">Our professional designers are adding new designs every 2 weeks. Keep your site fresh by changing to a new design at any point.</h3>
+                    <h3 class="white">We think everyone deserves a site that adapts to mobile and tablet devices. Change between full screen, mobile and tablet views without missing a beat. </h3>
                 </div>
-
-               <div class="tabs-2">
-                   <div class="slide">
-                       <input type="radio" id="tab-1" name="tab-group-1" checked>
-                       <label for="tab-1">Mobile</label>
-                       <div class="tab-content sml">
-                           <h4>Various preview modes</h4>
-                           <p>Lorem ipsum dolor sit amet ala ips
-                            consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                            <img src="{{asset('images/mobile-img.png')}}">
+                <div class="tabs-2">
+                    <div class="slide">
+                        <input type="radio" id="tab-1" name="tab-group-1" checked>
+                        <label for="tab-1">Mobile</label>
+                        <div class="tab-content sml">
+                            <div>
+                                <h4>Look both ways</h4>
+                                <p>Rotate each device 90 degress and <br>see your content adapt instantly. </p>
+                                <img src="{{asset('images/mobile-img.png')}}">
+                            </div>
                        </div> 
-                   </div>
-                    
-                   <div class="slide">
+                    </div>
+                    <div class="slide">
                        <input type="radio" id="tab-2" name="tab-group-1">
                        <label for="tab-2">Tablet</label>
                        <div class="tab-content sml">
-                           <h4>Various preview modes</h4>
-                           <p>Lorem ipsum dolor sit amet ala ips
-                            consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                           <img src="{{asset('images/mobile-img.png')}}">
+                            <h4>Tablet view</h4>
+                            <p>Tablets are the fastest growing device for web browsing so it's important to check your site looks it's best.</p>
+                            <img src="{{asset('images/mobile-img.png')}}">
                        </div> 
-                   </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -180,8 +186,8 @@
             <!-- WIDGETS !-->
             <section class="widgets">
                 <div class="wrapper sml">
-                    <h2>One site, every widget possible.</h2>
-                    <h3>A wide range of widgets available for you to choose from - simply drag &amp; drop them anywhere on your site.</h3>
+                    <h2>Twitter, Facebook and more</h2>
+                    <h3>Twitter and Facebook feeds are a great way to engage visitors to your site. You can also add maps, forms and many more items to any page.</h3>
 
                     <!-- WIDGET BLOCKS !-->
                     <ul class="widget-blocks">
@@ -228,8 +234,8 @@
             <!-- WEBSITE !-->
             <section class="website grey">
                 <div class="wrapper sml">
-                    <h2 class="wht-shad">Setup a website in minutes</h2>
-                    <h3 class="wht-shad">Lorem ipsum dolor sit amet, consectetur, adipisicing eiusmod tempor incididunt ut labore— et dolore ma.</h3>
+                    <h2 class="wht-shad">Built for busy people</h2>
+                    <h3 class="wht-shad">Sitejam won't slow you down with any technical stuff you don't care about. Just choose a design, add content and you're ready to publish a great site.</h3>
                     <div class="video-block">
                         <img src="{{asset('/images/video.png')}}"> 
                         <a href="#" class="text-link">Watch the video tour</a>
@@ -253,8 +259,8 @@
 
 <!-- SIGNUP BAR !-->
 <div class="signup-bar">
-    <a href="/pricing" class="btn pink lrg">Signup Free</a>
-    <span>or, see our <a href="/pricing">pricing list</a></span>
+    <a href="/pricing" class="btn pink lrg">Try Sitejam Free</a>
+    <span>No credit card required.</span>
 </div>
 
 <!-- QUICK SIGNUP !-->
@@ -305,17 +311,5 @@
 
 <!-- CONTENT END !-->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% endblock %}
