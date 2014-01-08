@@ -9,17 +9,25 @@
         <div class="left">
             <h1><img src="{{asset('/images/logo.png')}}"></h1>
         </div>
-        <nav>
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="/" class="selected">Tour</a></li>
                 <li><a href="/pricing">Pricing</a></li>
-                <li><a href="https://basekit.zendesk.com">Support</a></li>
             </ul>
+        </nav>
+        <nav class="nav-mob">
+            <div id="dl-menu" class="dl-menuwrapper">
+                <button class="dl-trigger dl-active">Open Menu</button>
+                <ul class="dl-menu">
+                    <li><a href="/" class="selected">Tour</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="right clearfix">
             <ul class="user-btns">
-                <li><a href="/pricing" class="btn pink">Signup</a></li>
-                <li><a href="/login" class="btn navy">Login</a></li>
+                <li><a href="/pricing" class="btn pink signup">Signup</a></li>
+                <li><a href="/login" class="btn navy login">Login</a></li>
             </ul>
         </div>
     </div>
@@ -27,8 +35,8 @@
 
 <section class="feature title-bar">
     <div class="wrapper">
-        <h2>Simple price plans</h2>
-        <h3>Get a <span>free 1 page</span> website with our <span>launch</span> plan</h3>
+        <h2>Get a great site at a great price</h2>
+        <h3>No hidden extras or sneaky up-sells. <span>14 day money-back</span> guarantee.</h3>
 
         <!-- PRICING TABLE !-->
         <section class="pricing-table">
@@ -36,26 +44,26 @@
                 <div class="column span-three-left">
                     <!-- LAUNCH !-->
                     <article class="price-block">
-                        <h3>Launch Package</h3>
+                        <h3>Launch Plan</h3>
                         <h4 class="grey-blue">&pound;0<span>/month</h4>
-                        <a href="#" class="btn blue solid">Get Started</a>
+                        <a href="/signup" class="btn blue solid">launch now</a>
                     </article>
                 </div>
                 <div class="column span-three-middle">
                     <!-- BASIC !-->
                     <article class="price-block">
-                        <h3>Basic Package</h3>
+                        <h3>Basic Plan</h3>
                         <h4 class="white">&pound;7<span>/month</h4>
-                        <a href="#" class="btn blue solid">Get Started</a>
+                        <a href="/signup" class="btn blue solid">buy basic</a>
                     </article>
                 </div>
                 <div class="column span-three-right">
                     <!-- BUSINESS !-->
                     <article class="price-block business">
-                        <div class="most-popular">Most Popular</div>
-                        <h3>Business Package</h3>
+                        <div class="most-popular">FREE DOMAIN INCLUDED</div>
+                        <h3>Business Plan</h3>
                         <h4 class="pink">&pound;12 <span>/month</h4>
-                        <a href="#" class="btn pink solid">Get Started</a>
+                        <a href="/signup" class="btn pink solid">GO BUSINESS</a>
                     </article>
                 </div>
             </div>
@@ -101,13 +109,13 @@
                 <!-- BUSINESS !-->
                 <article class="price-content">
                     <ul>
-                        <li><i class="fa fa-check"></i>31 Templates</li>
+                        <li><i class="fa fa-check"></i>37 Templates</li>
                         <li><i class="fa fa-check"></i>Unlimited pages</li>
                         <li><i class="fa fa-check"></i>Unlimited storage</li>
                         <li><i class="fa fa-check"></i>Image editing</li>
                         <li><i class="fa fa-check"></i>3 Free stock images</li>
                         <li><i class="fa fa-check"></i>PayPal button</li>
-                        <li><i class="fa fa-check"></i>Free custom domain</li>
+                        <li><i class="fa fa-check"></i>Free WWW domain name</li>
                         <li><i class="fa fa-check"></i>1 Email address</li>
                     </ul>
                 </article>
@@ -123,53 +131,24 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <div class="line-block pad-top">
-                        <h2>Publish a free site</h2>
-                        <h3>Publish the first page of your website free. No initial payment or credit card required.</h3>
+                        <h2>Launch your site today</h2>
+                        <h3>Create an online presence for free. A great way to learn more about site creation. </h3>
                     </div>
                 </div>
                 <div class="column span-three-middle">
-                    <div class="pad-top">
-                        <h2>Use any domain name</h2>
-                        <h3>Your website will work with any domain you already own - or you can buy one from us.</h3>
+                    <div class="line-block pad-top">
+                        <h2>Quick and simple</h2>
+                        <h3>If you need a small site, start here. Use any domain name you own or buy one from us. </h3>
                     </div>
                 </div>
                 <div class="column span-three-right">
                     <div class="line-block pad-top">
-                        <h2>Expert Support</h2>
-                        <h3>Have a question? Our team of experts will be happy to help with your request.</h3>
+                        <h2>Build a business here</h2>
+                        <h3>Grow your site as far as you want for one fixed price. Free domain name included.</h3>
                     <div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- SIGNUP BAR !-->
-<div class="signup-bar">
-    <a href="/pricing" class="btn pink lrg">Signup Free</a>
-    <span>or, see our <a href="/pricing">pricing list</a></span>
-</div>
-
-<!-- QUICK SIGNUP !-->
-<section class="quick-signup grey">
-    <div class="wrapper">
-        <form>
-            <fieldset>
-                <div class="inputset">
-                    <label for="name">Full Name</label>
-                    <input type="text" placeholder="Enter your full name">
-                </div>
-                <div class="inputset">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email address">
-                </div>
-                <div class="inputset">
-                    <label for="password">Password</label>
-                    <input type="text" placeholder="Enter a password">
-                </div>
-                <input type="submit" class="form-submit">
-            </fieldset>
-        </form>
     </div>
 </section>
 
@@ -190,7 +169,7 @@
             <ul>
                 <li><a href="/privacy">Privacy</a></li>
                 <li><a href="/termsandconditions">Terms &amp; Conditions</a></li>
-                <li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a></li>
+                <!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a></li> -->
             </ul>
         </div>
     </div>
@@ -198,17 +177,5 @@
 
 <!-- CONTENT END !-->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% endblock %}
