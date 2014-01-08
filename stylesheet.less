@@ -565,6 +565,15 @@ section {
                 } /* close callout */
             } /* close ul */            
         } /* close tabs */
+
+        &.page-title {
+            padding: 1.6em 0;
+            h2 {
+                text-align: left;
+                font-size: 32px;
+            }
+        }
+
     }
 }
 
@@ -607,6 +616,52 @@ section {
     width: 100%; 
 }
 
+
+/* ===============================
+   INTRO
+   =============================== */
+
+section {
+    &.login-signup {
+        form {
+            fieldset {
+                label {
+                    float: left;
+                    display: inline-block;
+                    width: 33%;
+                    font-family: 'effra';
+                    font-size: 18px;
+                    color: @color-swatch4;
+                    line-height: 33px;
+                }
+                input {
+                    display: inline-block;
+                    width: 64%;
+                    border: 0;
+                    font-family: 'caecilia';
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: @color-swatch5;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .form-submit {
+                    border: 0;
+                    width: 15%;
+                    padding: 19px 0;
+                    background-color: @color-swatch4;
+                    font-family: 'effra';
+                    font-size: 18px;
+                    text-align: center;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
 /* ===============================
    INTRO
    =============================== */
@@ -628,7 +683,7 @@ section {
             }
         }
         .pad-top {
-            padding-top: 7em;
+            padding: 7em 0;
             @media @tablet {
                 padding-top: 4em;
             }
@@ -646,13 +701,13 @@ section {
 
 .signup-bar {
     clear: both;
-    padding: 7em 0;
+    padding: 0 0 7em;
     text-align: center;
     @media @tablet {
-        padding: 5em 0;
+        padding: 0 0 5em;
     }
     @media @mobile {
-        padding: 5em 0 4em;
+        padding: 0 0 4em;
         text-align: left;
     }
     span {
