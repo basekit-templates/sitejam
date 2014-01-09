@@ -2,7 +2,7 @@
 	"name":"sitejam",
 	"thumbnail":"sitejam.png",
 	"screenshot":"sitejam.png",
-    "pageTypes":["pricing","login","signup","forgotten-password","reset-password"],
+    "pageTypes":["pricing","login","sign-up","forgotten-password","reset-password"],
     "tags": {
     "en": ["professional", "clean", "business", "modern", "colorful", "colourful", "stylish", "fresh", "studio", "music", "media", "young", "flexible"],
     "es": ["profesional", "limpio", "corporativo", "moderno", "colorido", "estilo", "fresco", "estudio", "música", "comunicacion", "joven", "flexible"],
