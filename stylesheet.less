@@ -635,25 +635,49 @@ section {
     p {
         color: #fff;
         &.error {
-            color: #fff;
             .p-font;
+            color: #b6fdff;
+            font-size: 13px;
+            height: 120px;
+            text-align: left;
         }
     }
     a {
         .p-font;
+        font-size: 14px;
         color: #fff;
-        border-bottom: 1px solid #66dee2;
+
         padding-bottom: 6px;
         &:hover {
-            color: lighten(@color-swatch2,7%);
+            color: #b6fdff;
         }
-        &.logo-wht {
-            border-bottom: 0;
+        &.signup-btn {
+            float: left;
+            clear: both;
+            width: 320px;
+            margin-bottom: 16px;
+            border: 0;
+            .border-radius(4px);
+            .box-sizing;
+            border: 2px solid #41D2D6;
+            padding: 15px 0;
+            background-color: transparent;
+            font-size: 15px;
+            text-align: center;
+            color: #b6fdff;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #fff;
+                color: #fff;
+            }
+            span {
+                color: #fff;
+            }
         }
     }
-    .w-container {
+    .form-wrapper {
         max-width: 750px;
-        &.container-login {
+        &.form-login {
             height: 500px;
             margin: auto;
             position: absolute;
@@ -661,9 +685,10 @@ section {
             left: 0;
             bottom: 0;
             right: 0;
-            form {
+            .form-pos {
+                margin: 0 13.3em 0;
                 fieldset {
-                    margin: 2em 13.3em 1.3em;
+                    margin: 1em 0 0;
                     label {
                         display: none;
                     }
@@ -684,8 +709,7 @@ section {
                             outline: none;
                         }
                     }
-                    .userloginbtn,
-                    .userregistrationbtn {
+                    button {
                         float: left;
                         clear: both;
                         width: 320px;
@@ -700,6 +724,7 @@ section {
                         cursor: pointer;
                         text-transform: uppercase;
                         letter-spacing: 2px;
+                        margin-bottom: 20px;
                         &:hover {
                             background-color: lighten(@color-swatch2,4%);
                             -webkit-transition: 0.2s;
@@ -708,8 +733,72 @@ section {
                         }
                     }
                 }
+                .widget {
+                    &.resetpassword {
+                        button {
+                            &.password-mask-toggle {
+                                position: absolute;
+                                right: 5px;
+                                width: 84px;
+                                background-color: #e4e4e4;
+                                float: right;
+                                padding: 23px 0;
+                                font-size: 12px;
+                                .border-radius(0);
+                                color: rgb(137, 157, 175);
+                                -webkit-border-top-right-radius: 5px;
+                                -webkit-border-bottom-right-radius: 5px;
+                                -moz-border-radius-topright: 5px;
+                                -moz-border-radius-bottomright: 5px;
+                                border-top-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                                &:hover {
+                                    background-color: #dce6f0;
+                                    color: #6b7d8d;
+                                    -webkit-transition: 0.2s;
+                                    -moz-transition: 0.2s;
+                                    transition: 0.2s;
+                                }
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+    }
+}
+
+/* ===============================
+   PAGE OVERLAY
+   =============================== */
+
+.overlay {
+    /* some styles to position the modal at the center of the page */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    line-height: 66px;
+    height: 160px;
+    margin-left: -150px;
+    margin-top: -100px;
+    background-color: white;
+    text-align: center;
+    .border-radius(6px);
+    .p-font;
+    background-image: image('/images/loader.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+   
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    outline: 9999px solid rgba(0,0,0,0.5);
+    img {
+        display: block;
+        margin: 40px auto 10px;
     }
 }
 
@@ -737,10 +826,10 @@ section {
         .pad-top {
             padding: 7em 0;
             @media @tablet {
-                padding-top: 4em;
+                padding: 3em 0 0;
             }
             @media @mobile {
-                padding-top: 3.5em;
+                padding-top: 3em;
             }
         }
     }
@@ -755,11 +844,17 @@ section {
     clear: both;
     padding: 0 0 7em;
     text-align: center;
+    &.pad {
+        padding: 7em 0;
+        @media @tablet {
+            padding: 5em 0;
+        }
+    }
     @media @tablet {
         padding: 0 0 5em;
     }
     @media @mobile {
-        padding: 0 0 4em;
+        padding: 4em 0;
         text-align: left;
     }
     span {
@@ -990,15 +1085,14 @@ section {
                                 width: 100%;
                                 a {
                                     position: absolute;
-                                    left: 30%;
-                                    right: 30%;
-                                    padding: 35% 0 6px;
+                                    left: 0;
+                                    right: 0;
+                                    padding: 40% 0 6px;
                                     text-align: center;
                                     color: @color-swatch1;
                                     font-size: 18px;
-                                    border-bottom: 1px solid #4ddbe0;
+                                    /*border-bottom: 1px solid #4ddbe0;*/
                                     &:hover {
-                                        border-bottom: 1px solid;
                                     }
                                 }
                             }
