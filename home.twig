@@ -157,9 +157,9 @@
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                         <label for="tab-1">Mobile</label>
                         <div class="tab-content sml">
-                            <div>
+                            <div class="iphone">
                                 <h4>Look both ways</h4>
-                                <p>Rotate each device 90 degress and <br>see your content adapt instantly. </p>
+                                <p>Rotate each device 90 degress and see your content adapt instantly.</p>
                                 <img src="{{asset('images/mobile-img.png')}}">
                             </div>
                        </div> 
@@ -168,9 +168,14 @@
                        <input type="radio" id="tab-2" name="tab-group-1">
                        <label for="tab-2">Tablet</label>
                        <div class="tab-content sml">
-                            <h4>Tablet view</h4>
-                            <p>Tablets are the fastest growing device for web browsing so it's important to check your site looks it's best.</p>
-                            <img src="{{asset('images/mobile-img.png')}}">
+                            <div class="ipad clearfix">
+                                <hgroup>
+                                    <h4>Tablet view</h4>
+                                    <p class="desktop">Tablets are the fastest growing device for web browsing so it's important to check your site looks it's best.</p>
+                                    <p class="tablet">Tablets are the fastest growing device for web browsing.</p>
+                                </hgroup>
+                                <img src="{{asset('images/ipad.png')}}">
+                            </div>
                        </div> 
                     </div>
                 </div>
@@ -184,14 +189,13 @@
     <div class="res-col columns span-50-50">
         <div class="column span-50">
             <!-- WIDGETS !-->
-            <section class="widgets">
+            <section class="widgets clearfix">
                 <div class="wrapper sml">
                     <h2>Twitter, Facebook and more</h2>
                     <h3>Twitter and Facebook feeds are a great way to engage visitors to your site. You can also add maps, forms and many more items to any page.</h3>
 
                     <!-- WIDGET BLOCKS !-->
-                    <ul class="widget-blocks">
-
+                    <ul class="widget-blocks clearfix">
                         <!-- PINK ROW !-->
                         <li class="pink maps">
                             <span>Google Maps</span>
@@ -199,7 +203,7 @@
                         <li class="pink gallery">
                             <span>Image Gallery</span>
                         </li>
-                        <li class="pink form">
+                        <li class="pink form last">
                             <span>Contact Form</span>
                         </li>
 
@@ -210,7 +214,7 @@
                         <li class="navy columns">
                             <span>Columns</span>
                         </li>
-                        <li class="navy nav">
+                        <li class="navy nav last">
                             <span>Navigation</span>
                         </li>
 
@@ -221,7 +225,7 @@
                         <li class="blue twitter">
                             <span>Twitter</span>
                         </li>
-                        <li class="blue">
+                        <li class="blue last">
                             <div class="view-all">
                                 <!-- <a href="#">View All</a> -->
                                 <a>and more</a>
