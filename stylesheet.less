@@ -301,6 +301,9 @@ section {
         @media @tablet {
             padding: 3.6em 0 0;
         }
+        @media @desktopSml {
+            padding: 3em 0 0;
+        }
         @media @mobileSml {
             padding: 2.6em 0 0;
         }
@@ -310,8 +313,11 @@ section {
             padding-bottom: 0;
             line-height: 1.2em;
             white-space: inherit;
-            @media @tablet {
+            @media @laptop {
                 font-size: 40px;
+            }
+            @media @desktopSml {
+                font-size: 32px;
             }
             @media @mobile {
                 max-width: 70%;
@@ -328,8 +334,12 @@ section {
             color: #b6fdff;
             line-height: 2em;
             -webkit-font-smoothing: antialiased;
-            @media @tablet {
+            @media @laptop {
                 font-size: 20px;
+            }
+            @media @desktopSml {
+                font-size: 18px;
+                line-height: 52px;
             }
             @media @mobile {
                 display: none;
@@ -444,6 +454,9 @@ section {
                     @media @tablet {
                         min-width: 740px;
                         height: 436px;
+                    }
+                    @media @desktopSml {
+                        margin-top: 2.5em;
                     }
                     @media @mobile {
                         margin: 3em 0 0;
@@ -829,10 +842,10 @@ section {
         .pad-top {
             padding: 7em 0;
             @media @tablet {
-                padding: 3em 0 0;
+                padding: 4em 0;
             }
             @media @mobile {
-                padding-top: 3em;
+                padding: 3em 0 0;
             }
         }
     }
@@ -854,7 +867,7 @@ section {
         }
     }
     @media @tablet {
-        padding: 5em 0;
+        padding: 0 0 5em;
     }
     @media @mobile {
         padding: 4em 0;
