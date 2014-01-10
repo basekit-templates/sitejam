@@ -5,10 +5,14 @@
 section {
     .pricing-table {
         margin: 5em 0 0;
+        @media @desktopSml {
+            margin: 4em 0 0;
+        }
         article {
             position: relative;
             background-color: @color-swatch2;
             max-width: 372px;
+            margin: 0 auto;
             -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.2);
             box-shadow: 0 0 50px rgba(0,0,0,0.2);
             -webkit-border-top-left-radius: 5px;
@@ -21,26 +25,79 @@ section {
                 font-size: 26px;
                 padding: 1.2em 0 .8em;
                 color: #fff;
+                @media @laptop {
+                    font-size: 24px;
+                    padding: 1em 0 .5em;
+                }
+                @media @tablet {
+                    font-size: 22px;
+                    padding: .6em 0 .5em;
+                }
+                @media @mobile {
+                    font-size: 19px;
+                    padding: .6em 0 .5em;
+                }
             }
             h4 {
                 font-size: 56px;
-                padding-bottom: .9em;
+                padding-bottom: .1em;
+                @media @laptop {
+                    font-size: 50px;
+                    padding-bottom: 0;
+                }
+                @media @tablet {
+                    font-size: 42px;
+                }
+                @media @desktopSml {
+                    font-size: 36px;
+                }
                 span {
                     font-size: 20px;
                     color: #9ec6d1;
                     letter-spacing: 0;
                     margin-left: 4px;
+                    @media @desktopSml {
+                        font-size: 16px;
+                    }
                 }
                 &.pink {
                     letter-spacing: -4px;                
                 }
             }
+            p {
+                @media @laptop {
+                    font-size: 15px;
+                    line-height: 37px;
+                }
+            }
             a {
                 position: relative;
-                top: 9px;
+                top: 29px;
                 z-index: 99999;
-                padding: 20px 48px;
+                padding: 0;
+                display: block;
+                margin: 0 auto;
+                width: 67%;
+                height: 60px;
+                line-height: 60px;
                 font-size: 17px;
+                @media @laptop {
+                    height: 54px;
+                    line-height: 54px;
+                    font-size: 16px;  
+                }
+                @media @tablet {
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 14px;
+                    top: 22px;
+                }
+                @media @desktopSml {
+                    height: 42px;
+                    line-height: 42px;
+                    font-size: 12px;
+                    top: 22px;
+                }
             }
             &.business {
                 .border-radius(0);
@@ -61,6 +118,9 @@ section {
                     font-size: 13px;
                     text-transform: uppercase;
                     letter-spacing: 2px;
+                    @media @tablet {
+                        font-size: 11px;
+                    }
                 }
             }
         }
@@ -71,6 +131,7 @@ section {
     &.pricing-content {
         article {
             max-width: 372px;
+            margin: 0 auto;
             border: 1px solid #eee;
             border-top: 0;
             padding: 66px 16% 50px;
@@ -81,15 +142,27 @@ section {
             -moz-border-radius-bottomleft: 5px;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
+            @media @tablet {
+                padding: 50px 16% 50px;
+            }
+            @media @desktopSml {
+                padding: 50px 16% 30px;
+            }
             ul {
                 li {
                     .p-font;
                     line-height: 40px;
                     font-size: 16px;
                     white-space: nowrap;
+                    @media @tablet {
+                        font-size: 14px;
+                    }
                     i {
                         color: @color-swatch4;
                         margin-right: 30px;
+                        @media @desktopSml {
+                            margin-right: 12px;
+                        }
                         &.fa {
                             &.fa-times {
                                 color: #e3e3e3;
