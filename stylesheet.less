@@ -115,6 +115,9 @@ a {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #e1e1e1;
     margin: 4em 0;
+    @media @desktopSml {
+        margin: 6em 0 3em;
+    }
 }
 
 
@@ -1207,16 +1210,38 @@ section {
         .website {
             .video-block {
                 margin: 3.5em 0 0;
+                display: block;
+                div {
+                    width: 50%;
+                    display: inline-block;
+                    float: right;
+                    @media @desktopSml {
+                        width: 100%;
+                        float: left;
+                    }
+                    p {
+                        font-family: 'tradegothic';
+                        font-size: 18px;
+                        border-bottom: 1px solid #00ccd2;
+                        color: #00ccd2;
+                        display: inline-block;
+                        padding-top: 2.2em;
+                        @media @desktopSml {
+                            padding-top: 1.8em;
+                        }
+                    }
+                }
             }
             img {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
                 webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            }
-            a {
-                vertical-align: top;
-                position: relative;
-                top: 2em;
-                left: 2em;
+                display: inline-block;
+                width: 40%;
+                margin-right: 5%;
+                @media @desktopSml {
+                    width: 100%;
+                    margin: 0;
+                }
             }
             ul {
                 li {
@@ -1338,6 +1363,35 @@ footer {
             }
         }
     }
+}
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
 }
 
 

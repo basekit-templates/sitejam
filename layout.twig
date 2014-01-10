@@ -27,6 +27,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset('/fonts/fontawesome/css/font-awesome.min.css')}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset('/css/resNav.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset('/css/magnific-popup.css')}}" />
 
 	{% include basekit.headScript %}
 	
@@ -41,10 +42,24 @@
 	<!-- RESPONSIVE NAV !-->
 	<script src="{{asset('/js/responsiveNav/modernizr.custom.js')}}"></script>
 	<script src="{{asset('/js/responsiveNav/jquery.dlmenu.js')}}"></script>
+	<script src="{{asset('/js/jquery.magnific-popup.min.js')}}"></script> 
 	<script>
 	    $(function() {
 	        $( '#dl-menu' ).dlmenu();
 	    });
+	</script>
+	<script>
+		$(document).ready(function() {
+		$('.popup-youtube').magnificPopup({
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			fixedContentPos: false
+		});
+	});
 	</script>
 
 </body>
