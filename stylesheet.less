@@ -14,7 +14,7 @@
    =============================== */
 
 body {
-    background-color: #e9e9e9;
+    background-color: #e2e2e2;
     /*margin: 0;*/
     margin: 0;
     padding: 0;
@@ -118,6 +118,9 @@ a {
     @media @desktopSml {
         margin: 6em 0 3em;
     }
+    @media @laptop {
+        margin: 3em 0;
+    }
 }
 
 
@@ -128,9 +131,9 @@ a {
 @15laptop: ~"only screen and (max-width: 1440px)"; /* 15" Laptop */
 @laptop: ~"only screen and (max-width: 1220px)"; /* Laptops */
 @tablet: ~"only screen and (max-width: 1024px)"; /* Tablet */
-@desktopSml: ~"only screen and (max-width: 850px)";
-@mobile: ~"only screen and (max-width : 480px), (max-width : 640px)"; /* Mobile */
-@mobileSml: ~"only screen and (max-width: 472px)";
+@desktopSml: ~"only screen and (max-width: 850px)"; /* Desktop Small */
+@mobile: ~"only screen and (max-width : 480px), (max-width : 768px)"; /* Mobile / Tablet */
+@mobileSml: ~"only screen and (max-width: 479px)";
 
 
 /* ===============================
@@ -138,13 +141,13 @@ a {
    =============================== */
 
 .grey {
-    background-color: #f2f2f2;
+    background-color: #ebebeb;
     padding: 6em 0;
     @media @tablet {
-        padding: 5em 0;
+        padding: 4em 0;
     }
     @media @mobile {
-        padding: 4em 0;
+        padding: 3em 0;
     }
 }
 
@@ -193,13 +196,13 @@ header {
             display: none;
             @media @tablet {
                 display: block;
+                float: right;
                 border-left: 1px solid #eeeeee;
                 padding: 0 0 0 30px;
-                margin: 7px 0 0 10px;
+                margin: 10px 0 0 25px;
             }
             @media @mobile { 
-                float: right;
-                margin-top: 10px;
+                margin: 10px 0 0 0px;
             }
             .dl-menu {
                 background-color: #fff;
@@ -323,7 +326,7 @@ section {
                 font-size: 32px;
             }
             @media @mobile {
-                max-width: 70%;
+                max-width: 80%;
                 margin: 0 auto;
             }
             @media @mobileSml {
@@ -459,10 +462,12 @@ section {
                         height: 436px;
                     }
                     @media @desktopSml {
-                        margin-top: 2.5em;
+                        margin-top: 2.3em;
+                        min-width: 600px;
+                        height: 356px;
                     }
                     @media @mobile {
-                        margin: 3em 0 0;
+                        margin: 3em auto 0;
                         min-width: 512px;
                         height: 309px;
                     }
@@ -481,6 +486,9 @@ section {
                     margin-left: 8px;
                     text-align: left;
                     height: 20px;
+                    @media @desktopSml {
+                        height: 12px;
+                    }
                     span {
                         display: inline-block;
                         width: 4px;
@@ -489,6 +497,11 @@ section {
                         .border-radius(50%);
                         border: 1px solid @color-swatch4;
                         vertical-align: middle;
+                        @media @desktopSml {
+                            margin-bottom: 6px;
+                            width: 2px;
+                            height: 2px;
+                        }
                     }
                 }
                 .magnify { 
@@ -500,15 +513,18 @@ section {
                         top: 81px;
                         width: 36%;
                     }
+                    @media @desktopSml {
+                        left: -19px;
+                        top: 67px;
+                        width: 38%;
+                    }
                     @media @mobile {
                         left: -13px;
                         top: 58px;
                         width: 34%;
                     }
                     @media @mobileSml {
-                        width: 77%;
-                        left: -17px;
-                        top: 58px;
+                        width: 73%;
                     }
                 }
                 .call-out {
@@ -527,11 +543,15 @@ section {
                     @media @tablet {
                         margin-top: 120px;
                     }
+                    @media @desktopSml {
+                        margin-top: 83px;
+                    }
                     @media @mobile {
                         padding: 18px;
                         margin-top: 74px;
                     }
                     @media @mobileSml {
+                        display: none;
                         width: 100%;
                         .box-sizing;
                         background-color: @color-swatch2;
@@ -612,8 +632,11 @@ section {
         .bg-cover;
         height: 416px;
     }
+    @media @desktopSml {
+        height: 344px;
+    }
     @media @mobile {
-        height: 289px;
+        height: 297px;
     }
 }
 .tabs > .content1:checked ~ ul > .content1 {
@@ -922,7 +945,7 @@ section {
                 -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
                 box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
                 @media @tablet {
-                    margin: 4em 0 0;
+                    margin: 3em 0 2em;
                 }
                 .controls {
                     margin-left: 8px;
@@ -968,7 +991,15 @@ section {
             background-repeat: no-repeat;
             background-position: right top;
             @media @tablet {
-                padding: 5em 0;
+                padding: 4em 0;
+            }
+            @media @mobile {
+                padding: 3em 0;
+            }
+            h3 {
+                @media @mobile {
+                    margin-bottom: 15%;
+                }
             }
             .tabs-2 {
                 position: relative;   
@@ -1003,7 +1034,7 @@ section {
                         transition: 0.2s;
                     }
                     @media @tablet {
-                        top: 302px;
+                        top: 286px;
                         padding: 10px 0;
                         font-size: 19px;
                     }
@@ -1022,6 +1053,10 @@ section {
                     &.sml {
                         width: 70%;
                         margin: 0 15%;
+                        @media @mobile {
+                            width: 80%;
+                            margin: 0 10%;
+                        }
                     }
                     .iphone {
                         max-width: 50%;
@@ -1029,13 +1064,44 @@ section {
                         @media @tablet {
                             margin-top: 3%;
                         }
+                        @media @mobile {
+                            margin-top: -3%;
+                        }
+                        img {
+                            @media @mobile {
+                                display: block;
+                                margin: 0 0 0 auto;
+                                width: 80%;
+                                right: 0;
+                            }
+                            @media @mobileSml {
+                                width: 100%;
+                            }
+                        }
+                        @media @mobileSml {
+                            max-width: 100%;
+                        }
                     }
                     .ipad {
                         max-width: 70%;
-                        margin-top: 9%;
+                        margin-top: 5%;
                         @media @tablet {
                             max-width: 80%;
-                            margin-top: 5%;
+                        }
+                        @media @mobile {
+                            max-width: 100%;
+                            margin-top: -6%;
+                        }
+                        @media @mobileSml {
+                            margin-top: 0;
+                        }
+                        img {
+                            @media @mobile {
+                                max-width: 80%;
+                            }
+                            @media @mobileSml {
+                                max-width: 100%;
+                            }
                         }
                     }
                     p {
@@ -1059,7 +1125,7 @@ section {
                         bottom: 31px;
                         left: 0;
                         @media @tablet {
-                            bottom: -10px;
+                            bottom: 6px;
                         }
                     }
                 } /* end tab-content */
@@ -1119,12 +1185,20 @@ section {
                             width: 33%;
                             padding-bottom: 33%;
                         }
+                        @media @mobileSml {
+                            width: 50%;
+                            padding-bottom: 50%;
+                        }
+
                         &.last {
                             @media @tablet {
                                 display: none;
                             }
                             @media @mobile {
                                 display: block;
+                            }
+                            @media @mobileSml {
+                                display: none;
                             }
                         }
                         span {
@@ -1228,9 +1302,9 @@ section {
                     width: 50%;
                     display: inline-block;
                     float: right;
-                    @media @desktopSml {
+                    @media @laptop {
                         width: 100%;
-                        float: left;
+                        float: none;
                     }
                     p {
                         font-family: 'tradegothic';
@@ -1239,8 +1313,9 @@ section {
                         color: #00ccd2;
                         display: inline-block;
                         padding-top: 2.2em;
-                        @media @desktopSml {
-                            padding-top: 1.8em;
+                        @media @laptop {
+                            padding-top: 1em;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -1249,10 +1324,11 @@ section {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
                 webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
                 display: inline-block;
-                width: 40%;
                 margin-right: 5%;
+                @media @laptop {
+                    margin: 0;
+                }
                 @media @desktopSml {
-                    width: 100%;
                     margin: 0;
                 }
             }
@@ -1262,6 +1338,11 @@ section {
                     vertical-align: top;
                     width: 40%;
                     margin-right: 10%;
+                    @media @tablet {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
