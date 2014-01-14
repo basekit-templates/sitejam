@@ -8,6 +8,9 @@ section {
         @media @desktopSml {
             margin: 4em 0 0;
         }
+        @media @mobile {
+            margin: 3.4em 0 0;
+        }
         article {
             position: relative;
             background-color: @color-swatch2;
@@ -21,6 +24,12 @@ section {
             -moz-border-radius-topright: 5px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            @media @mobile {
+                margin: 0 auto 0;
+                max-width: 100%;
+                padding: 0 30px;
+                .border-radius(0);
+            }
             h3 {
                 font-size: 26px;
                 padding: 1.2em 0 .8em;
@@ -34,8 +43,22 @@ section {
                     padding: .6em 0 .5em;
                 }
                 @media @mobile {
-                    font-size: 19px;
-                    padding: .6em 0 .5em;
+                    display: block;
+                    float: left;
+                    font-size: 22px;
+                    padding: 1.4em 0 0;
+                }
+                @media @mobileSml {
+                    width: 100%;
+                    padding: .7em 0 0;
+                }
+                bdi {
+                    @media @tabletSml {
+                        display: none;
+                    }
+                    @media @mobileSml {
+                        display: inline-block;
+                    }
                 }
             }
             h4 {
@@ -51,6 +74,16 @@ section {
                 @media @desktopSml {
                     font-size: 36px;
                 }
+                @media @mobile {
+                    float: right;
+                    padding: 40px 20px 34px 0;
+                    font-size: 46px;
+                }
+                @media @mobileSml {
+                    width: 100%;
+                    text-align: center;
+                    padding: 40px 0;
+                }
                 span {
                     font-size: 20px;
                     color: #9ec6d1;
@@ -61,7 +94,15 @@ section {
                     }
                 }
                 &.pink {
-                    letter-spacing: -4px;                
+                    letter-spacing: -4px;
+                    @media @mobile {
+                        padding: 44px 20px 30px 0;
+                    }   
+                    @media @mobileSml {
+                        width: 100%;
+                        text-align: center;
+                        padding: 40px 0;
+                    }             
                 }
             }
             p {
@@ -70,7 +111,7 @@ section {
                     line-height: 37px;
                 }
             }
-            a {
+            button {
                 position: relative;
                 top: 29px;
                 z-index: 99999;
@@ -98,9 +139,28 @@ section {
                     font-size: 12px;
                     top: 22px;
                 }
+                @media @mobile {
+                    margin: .7em 0;
+                    width: inherit;
+                    padding: 0 20px;
+                    min-width: 160px;
+                    float: right;
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 14px;
+                }
+                @media @mobileSml {
+                    width: 100%;
+                    top: 8px;
+                }
             }
             &.business {
                 .border-radius(0);
+                @media @mobile {
+                    h3 {
+                        padding: 1.8em 0 0;
+                    }
+                }
                 .most-popular {
                     position: absolute;
                     top: -25px;
@@ -121,6 +181,29 @@ section {
                     @media @tablet {
                         font-size: 11px;
                     }
+                    @media @mobile {
+                        width: inherit;
+                        padding: 5px 12px;
+                        left: 0;
+                        -webkit-border-top-left-radius: 0;
+                        -webkit-border-top-right-radius: 0;
+                        -webkit-border-bottom-right-radius: 0;
+                        -webkit-border-bottom-left-radius: 0;
+                        -moz-border-radius-topleft: 0;
+                        -moz-border-radius-topright: 0;
+                        -moz-border-radius-bottomright: 5px;
+                        -moz-border-radius-bottomleft: 0;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 0;
+                        top: 0;
+                    }
+                    @media @mobileSml {
+                        .box-sizing;
+                        width: 100%;
+                        .border-radius(0);
+                    }
                 }
             }
         }
@@ -129,7 +212,8 @@ section {
 
 section {
     &.pricing-content {
-        article {
+        .price-content {
+            background-color: #fff;
             max-width: 372px;
             margin: 0 auto;
             border: 1px solid #eee;
@@ -148,7 +232,30 @@ section {
             @media @desktopSml {
                 padding: 50px 16% 30px;
             }
+            @media @mobile {
+                max-width: 100%;
+                .border-radius(0);
+                padding: 20px 40px;
+            }
             ul {
+                @media @mobile {
+                    -webkit-column-count: 2;
+                    -webkit-column-gap:   20px;  
+                    -moz-column-count:    2;
+                    -moz-column-gap:      20px;
+                    column-count:         2;
+                    column-gap:           20px;
+                    text-align: left;
+                }
+                @media @mobileSml {
+                    -webkit-column-count: 1;
+                    -webkit-column-gap:   0px;  
+                    -moz-column-count:    1;
+                    -moz-column-gap:      0px;
+                    column-count:         1;
+                    column-gap:           0px;
+                    text-align: left;
+                }
                 li {
                     .p-font;
                     line-height: 40px;
@@ -156,6 +263,10 @@ section {
                     white-space: nowrap;
                     @media @tablet {
                         font-size: 14px;
+                    }
+                    @media @mobile {
+                        text-align: left;
+                        font-size: 15px;
                     }
                     i {
                         color: @color-swatch4;
@@ -178,6 +289,13 @@ section {
         }
     }
 }
+
+.show_hide {
+    display:none;
+}
+
+
+
 
 
 

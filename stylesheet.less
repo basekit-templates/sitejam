@@ -133,7 +133,21 @@ a {
 @tablet: ~"only screen and (max-width: 1024px)"; /* Tablet */
 @desktopSml: ~"only screen and (max-width: 850px)"; /* Desktop Small */
 @mobile: ~"only screen and (max-width : 480px), (max-width : 768px)"; /* Mobile / Tablet */
+@tabletSml: ~"only screen and (max-width: 640px)";
 @mobileSml: ~"only screen and (max-width: 479px)";
+
+.desktop {
+    display: block;
+    @media @mobile {
+        display: none;
+    }
+}
+.mobile {
+    display: none;
+    @media @mobile {
+        display: block;
+    }
+}
 
 
 /* ===============================
@@ -660,6 +674,19 @@ section {
 
 
 /* ===============================
+   PAGE TITLE BAR
+   =============================== */
+
+section {
+    &.title-bar {
+        @media @mobile {
+            padding: 3em 0 4em;
+        }
+    }
+}
+
+
+/* ===============================
    LOGIN - SIGNUP
    =============================== */
 
@@ -853,8 +880,9 @@ section {
     &.intro {
         .intro-blocks {
             text-align: center;
-                @media @mobile {
+            @media @mobile {
                 text-align: left;
+                padding: 0 0 3em;
             }
         }
         .line-block {
