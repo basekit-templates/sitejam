@@ -859,12 +859,16 @@ section {
     .border-radius(6px);
     .p-font;
     background-image: image('/images/loader.png');
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
    
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
     outline: 9999px solid rgba(0,0,0,0.5);
+    .inner {
+        padding-top:25px;
+    }
+
     img {
         display: block;
         margin: 40px auto 10px;
