@@ -1,0 +1,181 @@
+/* ===============================
+   GOOGLE COUPON
+   =============================== */
+
+header {
+	&.google {
+		.powered-by {
+	        display: inline-block;
+	        vertical-align: top;
+	        height: 32px;
+	        border-left: 1px solid #eeeeee;
+	        margin: 10px 0 0 25px;
+	        padding-left: 25px;
+	        p {
+	            display: inline-block;
+	            vertical-align: middle;
+	            font-family: 'effra';
+	            font-size: 17px;
+	            -webkit-font-smoothing: antialiased;
+	            .mobHide {
+	            	@media only screen and (max-width: 690px) {
+	            		display: none;
+	            	}
+	            }
+	        }
+	        .logo-gry {
+	            vertical-align: middle;
+	            margin-left: 6px;
+	        }
+	        @media @tabletSml {
+	        	display: none;
+	        }
+	    }
+		a {
+			&.signup {
+				position: relative;
+				&:after {
+					width: 0; 
+					height: 0; 
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-bottom: 10px solid #2a424a;
+					position: absolute;
+					left: 45px;
+					content: '';
+					bottom: -24px;
+					@media @tablet {
+						left: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+section {
+	&.google-coupon {
+		background-color: #2a424a;
+		padding: 0;
+		text-align: center;
+		color: #fff;
+		@media @mobileSml {
+        	padding: 4em 0 0;
+        }
+		h2 {
+			position: relative;
+			display: inline-block;
+			padding: 20px;
+			margin-bottom: 40px;
+			margin-top: 2em;
+			border: 2px dashed #395964;
+			color: #fff;
+			font-size: 25px;
+			letter-spacing: 1px;
+			line-height: 32px;
+			text-transform: uppercase;
+			&:before {
+				content: '\2701';
+				font-size: 70px;
+				color: #395964;
+				position: absolute;
+				top: -33px;
+				left: -27px;
+			}
+			span {
+				font-size: 32px;
+			}
+		}
+		p {
+			font-family: 'effra';
+			color: #fff;
+			font-size: 22px;
+			line-height: 44px;
+			-webkit-font-smoothing: antialiased;
+			span {
+				&.lrg {
+					font-size: 25px;
+				}
+			}
+		}
+		.proud {
+			font-family: 'effra';
+			background-color: #253a41;
+			padding: 20px 0;
+			margin: 5.5em 0 0;
+			color: #6e96a4;
+			font-size: 15px;
+			line-height: 22px;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			-webkit-font-smoothing: antialiased;
+			@media @mobileSml {
+	        	margin: 4em 0 0;
+	        }
+		}
+	}
+}
+
+.slider {
+	display:none;
+}
+
+
+.hide-show-intro {
+	display: inline-block;
+	padding: 16px 0;
+	font-size: 20px!important;
+	cursor: pointer;
+}
+
+.exit {
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	left: 16px;
+	width: 14px;
+    height: 14px;
+    padding: 7px 6px 5px 6px;
+    .border-radius(50%);
+    color: #fff;.border-radius(50%);
+    border: 2px solid #395964;
+    cursor: pointer;
+    &:after {
+		width: 0; 
+		height: 0; 
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #fff;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		content: '';
+	}
+    &:hover {
+    	border-color: #fff;
+    }
+}
+.sliderExpanded {
+	&.collapseSlider {
+	    &:hover {
+	    	border-color: #fff;
+	    }
+	}
+	.exit {
+		&:after {
+			content: '\2715';
+			border: none;
+			position: absolute;
+			right: 10px;
+			top: -17px;
+			font-size: 14px;
+		}
+	}
+}
+
+
+
+

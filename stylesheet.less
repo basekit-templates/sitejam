@@ -7,6 +7,7 @@
 @import "@{templateLocal}/css/buttons.less";
 @import "@{templateLocal}/css/rescols.less";
 @import "@{templateLocal}/css/pricing.less";
+@import "@{templateLocal}/css/google.less";
 
 
 /* ===============================
@@ -15,7 +16,6 @@
 
 body {
     background-color: #e2e2e2;
-    /*margin: 0;*/
     margin: 0;
     padding: 0;
 }
@@ -167,6 +167,46 @@ a {
 
 
 /* ===============================
+   DEFAUT PAGES
+   =============================== */
+
+.bk-pt-default {
+    .main {
+        padding: 2.5em 0 5em;
+        ul, ol {
+           padding:0 0 0 20px;
+           li {
+               .p-font;
+               list-style-type: circle; 
+            }
+        }
+        h3 {
+           padding: 30px 0 20px;
+           margin: 0;
+           color: #132e36;
+        }
+        p {
+           padding: 6px 0;
+        }
+        footer p {
+            padding: 0!important;
+        }
+        .responsivecolumns {
+            section {
+                padding: 0;
+            }
+        }
+        hr {
+            background: rgb(231, 231, 231);
+            height: 1px;
+            border: 0;
+            margin: 30px 0 20px;
+        }
+    }
+}
+
+
+/* ===============================
    HEADER
    =============================== */
 
@@ -192,6 +232,7 @@ header {
         }
     }
     h1 {
+        display: inline-block;
         position: relative;
         top: 5px;
         @media @tablet {
@@ -381,9 +422,7 @@ section {
                 margin: 2em 0 0;
             }
             label {
-                /* HIDE TABS */
                 display: none!important;
-
                 font-family: 'tradegothic';
                 text-align: center;
                 position: relative;
@@ -1331,23 +1370,22 @@ section {
                 margin: 3.5em 0 0;
                 display: block;
                 div {
-                    width: 50%;
                     display: inline-block;
-                    float: right;
                     @media @laptop {
                         width: 100%;
                         float: none;
                     }
                     p {
+                        display: inline-block;
                         font-family: 'tradegothic';
                         font-size: 18px;
                         border-bottom: 1px solid #00ccd2;
                         color: #00ccd2;
-                        display: inline-block;
-                        padding-top: 2.2em;
+                        position: relative;
+                        top: -47px;
                         @media @laptop {
-                            padding-top: 1em;
                             font-size: 16px;
+                            top: 20px;
                         }
                     }
                 }
@@ -1449,14 +1487,25 @@ footer {
     padding: 45px 0;
     .footer-left {
         float: left;
+        @media @tabletSml {
+            width: 50%;
+        }
     }
     .footer-right {
         float: right;
+        @media @tablet {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+        @media @tabletSml {
+            width: 50%;
+            margin: 0;
+        }
     }
     p {
         font-size: 14px;
         color: #406d7a;
-        line-height: 28px;
+        line-height: 32px;
     }
     ul {
         li {
@@ -1466,6 +1515,36 @@ footer {
             margin-left: 30px;
             &:first-child {
                 margin-left: 0;
+            }
+            &.tw-share {
+                position: relative;
+                top: 5px;
+            }
+            &.tweet1 {
+                margin-left: 4px;
+                @media @tabletSml {
+                    margin-left: 0;
+                    position: relative;
+                    top: -13px;
+                }
+            }
+            &.tabShow {
+                display: block;
+                @media @tabletSml {
+                    display: none;
+                }
+            }
+            &.tabHide {
+                display: none;
+                @media @mobile {
+                    display: block;
+                }
+            }
+            @media @tabletSml {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-left: 0;
+                margin-right: 30px;
             }
             a {
                 font-family: 'tradegothic';
@@ -1485,6 +1564,29 @@ footer {
                     &:hover {
                         color: @color-swatch3;
                     }
+                }
+            }
+        }
+        .widget {
+            .tweet {
+                height: 18px;
+                a {
+                    position: relative;
+                    background-color: #eee;
+                    background-image: -webkit-linear-gradient(#fff,#dedede);
+                    background-image: linear-gradient(#fff,#dedede);
+                    background-image: image('/images/icons/ic-tweet.png');
+                    background-repeat: no-repeat;
+                    background-position: 2px 1px;
+                    padding: 2px 4px 3px 18px;
+                    background-size: 15px;
+                    border: #ccc solid 1px;
+                    border-radius: 3px;
+                    font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif;
+                    color: #333333;
+                    font-weight: bold;
+                    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+                    cursor: pointer;
                 }
             }
         }

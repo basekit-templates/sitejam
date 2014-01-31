@@ -5,7 +5,45 @@
 <div class="content">
 
 <!-- HEADER !-->
-{% include '/includes/header.twig' %}
+<header class="google clearfix">
+    <div class="wrapper">
+        <div class="left">
+            <h1><a href="/" title="Create a website"><img src="{{asset('/images/logo.png')}}"></a></h1>
+            <div class="powered-by">
+                <p><span class="mobHide">powered</span> by</p>
+                <a href="http://www.basekit.com"><img src="{{asset('/images/logo-gry.png')}}" class="logo-gry"></a>
+            </div>
+        </div>
+        <div class="right clearfix">
+            <ul class="user-btns">
+                <li><a href="/sign-up" class="btn pink signup">Signup</a></li>
+                <li><a href="/login" class="btn navy login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- GOOGLE COUPON !-->
+<section class="google-coupon">
+
+    <div class="toggler" id="toggler-slideOne">
+        <span class="expandSlider">
+        <p class="hide-show-intro"><span class="pink">Click here</span> for a <em>limited time</em> only upgrade and get <span class="pink">50%</span> discount</p><span class="exit"></span>
+        <span class="collapseSlider"></span>
+    </div>
+    <div class="slider" id="slideOne">
+        <div class="wrapper">
+            <h2>Use code ‘<span class="pink">GOOGLE50</span>’ for 50% off</h2>
+            <p>For a <em>limited time</em> only upgrade to our ‘<span class="pink">Basic</span>’ or<br> ‘<span class="pink">Business</span>’ plan and get 50% off for 6 months by<br>entering the code '<span class="pink lrg">GOOGLE50</span>' at the checkout'.</p>
+        </div>
+        <div class="proud">
+            <div class="wrapper">
+                Proud to be partnered with <span class="white">Google</span> as an <span class="white">approved Multi-Device vendor</span>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <section class="feature">
     <div class="wrapper">
