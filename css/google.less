@@ -34,6 +34,9 @@ header {
 		a {
 			&.signup {
 				position: relative;
+				@media @mobileSml {
+					display: block!important;
+				}
 				&:after {
 					width: 0; 
 					height: 0; 
@@ -51,6 +54,23 @@ header {
 			}
 		}
 	}
+	@media @mobileSml {
+		.left {
+			width: 144px;
+			margin: 2px 0 0;
+		}
+	}
+	.right {
+		@media @mobileSml {
+			display: block!important;
+			.user-btns {
+				padding: 0;
+				li {
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }
 
 section {
@@ -59,9 +79,6 @@ section {
 		padding: 0;
 		text-align: center;
 		color: #fff;
-		@media @mobileSml {
-        	padding: 4em 0 0;
-        }
 		h2 {
 			position: relative;
 			display: inline-block;
@@ -82,8 +99,14 @@ section {
 				top: -33px;
 				left: -27px;
 			}
+			@media @mobile {
+				font-size: 22px;
+			}
 			span {
 				font-size: 32px;
+					@media @mobile {
+					font-size: 28px;
+				}
 			}
 		}
 		p {
@@ -92,6 +115,12 @@ section {
 			font-size: 22px;
 			line-height: 44px;
 			-webkit-font-smoothing: antialiased;
+			@media @mobile {
+				font-size: 20px;
+				br {
+					display: none;
+				}
+			}
 			span {
 				&.lrg {
 					font-size: 25px;
@@ -109,23 +138,24 @@ section {
 			text-transform: uppercase;
 			letter-spacing: 0.15em;
 			-webkit-font-smoothing: antialiased;
-			@media @mobileSml {
+			@media @mobile {
 	        	margin: 4em 0 0;
 	        }
 		}
 	}
 }
 
-.slider {
-	display:none;
-}
-
-
 .hide-show-intro {
 	display: inline-block;
-	padding: 16px 0;
+	padding: 20px 0;
 	font-size: 20px!important;
+	line-height: 30px!important;
 	cursor: pointer;
+	@media @mobileSml {
+		.mobHide {
+			display: none;
+		}
+	}
 }
 
 .exit {
@@ -137,25 +167,22 @@ section {
     height: 14px;
     padding: 7px 6px 5px 6px;
     .border-radius(50%);
-    color: #fff;.border-radius(50%);
+    color: #fff;
     border: 2px solid #395964;
     cursor: pointer;
     &:after {
-		width: 0; 
-		height: 0; 
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
-		border-top: 6px solid #fff;
+		content: '\2715';
+		border: none;
 		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		top: 0;
-		margin: auto;
-		content: '';
+		right: 7px;
+		top: 5px;
+		font-size: 14px;
 	}
     &:hover {
     	border-color: #fff;
+    }
+    @media @mobile {
+    	display: none
     }
 }
 .sliderExpanded {
@@ -166,12 +193,18 @@ section {
 	}
 	.exit {
 		&:after {
-			content: '\2715';
-			border: none;
+			width: 0; 
+			height: 0; 
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 6px solid #fff;
 			position: absolute;
-			right: 10px;
-			top: -17px;
-			font-size: 14px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+			content: '';
 		}
 	}
 }
