@@ -729,25 +729,47 @@ section {
    LOGIN - SIGNUP
    =============================== */
 
-.login-signup {
+.sitejam-form {
+    position: fixed;
+    height: 100%;
+    width: 100%;
     background-image: image('/images/feature-bg.jpg');
     background-repeat: no-repeat;
     background-position: bottom center;
     .bg-cover;
     background-color: @color-swatch4;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-    position: fixed;
+
+    /* Form Container */
+    .form-container {
+        width: 320px;
+        height: 332px;
+        position: absolute;
+        left: 50%;
+        top: 40%; 
+        margin-left: -150px;
+        margin-top: -150px;
+        @media @mobile {
+            width: 90%;
+            height: 392px;
+            position: absolute;
+            left: 5%;
+            top: 30px;
+            margin: 0 auto;
+            display: block;
+        }
+        img {
+            display: block;
+            margin: 0 auto 30px;
+        }
+    }
     p {
         color: #fff;
+        text-align: center;
         &.error {
             .p-font;
             color: #b6fdff;
             font-size: 13px;
             height: 120px;
-            text-align: left;
         }
     }
     a {
@@ -762,7 +784,7 @@ section {
         &.signup-btn {
             float: left;
             clear: both;
-            width: 320px;
+            width: 100%;
             margin-bottom: 16px;
             border: 0;
             .border-radius(4px);
@@ -783,101 +805,96 @@ section {
             }
         }
     }
-    .form-wrapper {
-        max-width: 750px;
-        &.form-login {
-            height: 500px;
-            margin: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            .form-pos {
-                margin: 0 13.3em 0;
-                fieldset {
-                    margin: 1em 0 0;
-                    label {
-                        display: none;
-                    }
-                    input {
-                        float: left;
-                        clear: both;
-                        width: 320px;
-                        border: 0;
-                        .border-radius(4px);
-                        .box-sizing;
-                        padding: 16px 14px;
-                        font-family: 'caecilia';
-                        font-size: 16px;
-                        line-height: 28px;
-                        margin-bottom: 10px;
-                        color: @color-swatch5;
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                    button {
-                        float: left;
-                        clear: both;
-                        width: 320px;
-                        border: 0;
-                        .border-radius(4px);
-                        padding: 21px 0;
-                        background-color: @color-swatch2;
-                        font-family: 'effra';
-                        font-size: 15px;
-                        text-align: center;
-                        color: @color-swatch1;
-                        cursor: pointer;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        margin-bottom: 20px;
-                        &:hover {
-                            background-color: lighten(@color-swatch2,4%);
-                            -webkit-transition: 0.2s;
-                            -moz-transition: 0.2s;
-                            transition: 0.2s;
-                        }
-                    }
+    .main-form {
+        @media @mobile {
+            margin: 0 auto;
+            max-width: 320px;
+        }
+        form {
+            label {
+                display: none;
+            }
+            input {
+                float: left;
+                clear: both;
+                width: 100%;
+                border: 0;
+                .border-radius(4px);
+                .box-sizing;
+                padding: 16px 14px;
+                font-family: 'caecilia';
+                font-size: 16px;
+                line-height: 28px;
+                margin-bottom: 10px;
+                color: @color-swatch5;
+                @media @mobile {
+                    width: 100%;
                 }
-                .widget {
-                    &.resetpassword {
-                        button {
-                            &.password-mask-toggle {
-                                position: absolute;
-                                right: 5px;
-                                width: 84px;
-                                background-color: #e4e4e4;
-                                float: right;
-                                padding: 23px 0;
-                                font-size: 12px;
-                                .border-radius(0);
-                                color: rgb(137, 157, 175);
-                                -webkit-border-top-right-radius: 5px;
-                                -webkit-border-bottom-right-radius: 5px;
-                                -moz-border-radius-topright: 5px;
-                                -moz-border-radius-bottomright: 5px;
-                                border-top-right-radius: 5px;
-                                border-bottom-right-radius: 5px;
-                                &:hover {
-                                    background-color: #dce6f0;
-                                    color: #6b7d8d;
-                                    -webkit-transition: 0.2s;
-                                    -moz-transition: 0.2s;
-                                    transition: 0.2s;
-                                }
-                                &:focus {
-                                    outline: none;
-                                }
-                            }
-                        }
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                float: left;
+                clear: both;
+                width: 100%;
+                border: 0;
+                .border-radius(4px);
+                padding: 21px 0;
+                background-color: @color-swatch2;
+                font-family: 'effra';
+                font-size: 15px;
+                text-align: center;
+                color: @color-swatch1;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+                &:hover {
+                    background-color: lighten(@color-swatch2,4%);
+                    -webkit-transition: 0.2s;
+                    -moz-transition: 0.2s;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+    .widget {
+        &.resetpassword {
+            button {
+                box-shadow: none;
+                &.password-mask-toggle {
+                    position: absolute;
+                    right: 0;
+                    width: 84px;
+                    background-color: #e4e4e4;
+                    float: right;
+                    padding: 23px 0;
+                    font-size: 12px;
+                    .border-radius(0);
+                    color: rgb(137, 157, 175);
+                    -webkit-border-top-right-radius: 5px;
+                    -webkit-border-bottom-right-radius: 5px;
+                    -moz-border-radius-topright: 5px;
+                    -moz-border-radius-bottomright: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    &:hover {
+                        background-color: #dce6f0;
+                        color: #6b7d8d;
+                        -webkit-transition: 0.2s;
+                        -moz-transition: 0.2s;
+                        transition: 0.2s;
+                    }
+                    &:focus {
+                        outline: none;
                     }
                 }
             }
         }
     }
 }
+
 
 /* ===============================
    PAGE OVERLAY

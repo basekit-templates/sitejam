@@ -4,12 +4,13 @@
 
 <div class="login-signup">
 
-<div class="form-wrapper form-login">
-    <div class="form-pos">
-        <a href="/"><img src="{{asset('/images/logo-wht.png')}}"></a>
-        {{widget('userregistration', 'userregistration', {'align': 'right'})|raw}}
-        <p class="clearfix"><a href="/login" class="signup-btn">Already have an account? <span>Login here</span>.</a></p>
-        <!-- <p><a href="/forgotten-password">Forgot your password?</a></p> -->
+<div class="sitejam-form">
+    <div class="form-container">
+        <img class="magnify" src="{{asset('images/logo-wht.png')}}">
+        <div class="main-form">
+            {{widget('userregistration', 'userregistration', {'align': 'right'})|raw}}
+            <p class="clearfix"><a href="/login" class="signup-btn">Already have an account? <span>Login here</span>.</a></p>
+        </div>
     </div>
 </div>
 
