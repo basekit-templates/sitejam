@@ -5,7 +5,23 @@
 <div class="content">
 
 <!-- HEADER !-->
-{% include '/includes/header.twig' %}
+<header class="google clearfix">
+    <div class="wrapper">
+        <div class="left">
+            <h1><a href="/" title="Create a website"><img src="{{asset('/images/logo.png')}}"></a></h1>
+            <div class="powered-by">
+                <p><span class="mobHide">powered</span> by</p>
+                <a href="http://www.basekit.com"><img src="{{asset('/images/bk-logo.png')}}" class="logo-gry"></a>
+            </div>
+        </div>
+        <div class="right clearfix">
+            <ul class="user-btns">
+                <li><a href="/pricing" class="btn pink signup">Criar Conta</a></li>
+                <li><a href="/login" class="btn navy login">Acessar</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 
 <!-- GOOGLE COUPON !-->
 <section class="google-coupon">
