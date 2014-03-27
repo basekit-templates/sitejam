@@ -5,88 +5,73 @@
 <div class="content">
 
 <!-- HEADER !-->
-<header class="google clearfix">
-    <div class="wrapper">
-        <div class="left">
-            <h1><a href="/" title="Create a website"><img src="{{asset('/images/logo.png')}}"></a></h1>
-            <div class="powered-by">
-                <p><span class="mobHide">powered</span> by</p>
-                <a href="http://www.basekit.com"><img src="{{asset('/images/bk-logo.png')}}" class="logo-gry"></a>
-            </div>
-        </div>
-        <div class="right clearfix">
-            <ul class="user-btns">
-                <li><a href="/pricing" class="btn pink signup">Signup</a></li>
-                <li><a href="/login" class="btn navy login">Login</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+{% include '/includes/header.twig' %}
 
 <!-- GOOGLE COUPON !-->
 <section class="google-coupon">
-
     <div class="toggler" id="toggler-slideOne">
         <span class="expandSlider">
         <div class="wrapper">
-            <p class="hide-show-intro"><span class="pink">Click here</span> for a <em>limited time</em> only upgrade <span class="mobHide">and get <span class="pink">50%</span> discount</p><span class="exit"></span></span>
+            <p class="hide-show-intro"><span class="pink">Clique aqui</span> por um <em>tempo limitado</em> compre o seu pacote <span class="mobHide">e tenha um desconto de <span class="pink">50%</span></p><span class="exit"></span></span>
             <span class="collapseSlider"></span>
         </div>
     </div>
     <div class="slider" id="slideOne">
         <div class="wrapper">
-            <h2>Use code ‘<span class="pink">GOOGLE50</span>’ for 50% off</h2>
-            <p>For a <em>limited time</em> only upgrade to our ‘<span class="pink">Basic</span>’ or<br> ‘<span class="pink">Business</span>’ plan and get 50% off for 6 months by<br>entering the code '<span class="pink lrg">GOOGLE50</span>' at the checkout'.</p>
+            <h2>Use o código ‘<span class="pink">GOOGLE50</span>’ para um desconte de 50%</h2>
+            <p>Por um <em>tempo limitado</em> compre um pacote ‘<span class="pink">Basico</span>’ ou<br> ‘<span class="pink">Negócios</span>’ e tenha um desconto de 50% por 6 meses.<br>Simplesmente insira o código '<span class="pink lrg">GOOGLE50</span>' antes de processar o pagamento'.</p>
         </div>
         <div class="proud">
             <div class="wrapper">
-                Proud to be partnered with <span class="white">Google</span> as an <span class="white">approved Multi-Device vendor</span>
+                Orgulhoso de ser um parceiro do <span class="white">Google</span> como provedor de um <span class="white">sistema Multi-Dispositivo</span>
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="feature">
     <div class="wrapper">
-        <h2>A simple, powerful website creator</h2>
-        <h3>Create a site that looks great on big screens, phones and tablets.</h3>
+        <h2>Um editor de sites simples e poderoso</h2>
+        <h3>Crie um site que fica ótimo em um tela grande, celulares e tablets.</h3>
         <div class="tabs">
             <input type="radio" name="tabs" checked id="tab1" class="content1">
                 <label for="tab1" style='border-left: 0'>
                     <span>
-                        <span>Drag &amp; Drop</span>
+                        <span>Clique &amp; Arraste</span>
                     </span>
                 </label>
+{#
             <input type="radio" name="tabs" id="tab2" class="content2">
                 <label for="tab2">
                     <span>
-                        <span>Domains</span>
+                        <span>Domínios</span>
                     </span>
                 </label>
             <input type="radio" name="tabs" id="tab3" class="content3">
                 <label for="tab3">
                     <span>
-                        <span>Templates</span>
+                        <span>Modelos de site</span>
                     </span>
                 </label>
+#}
              <ul class="browser">
                 <div class="controls"><span></span><span></span><span></span></div>
                 <li class="content1">
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
-                            <h4>Drag &amp; Drop</h4>
-                            <p>Add text, images, movies and all kinds of social content to your page. See how it looks on a phone or tablet instantly. </p>
+                            <h4>Clique &amp; Arraste</h4>
+                            <p>Adicione textos, imagens, vídeos e todos os tipos de conteúdo para a sua página. Veja como o site fica no celular ou no tablet rápidamente.</p>
                         </div>    
                     </div>
                 </li>
+{#
                 <li class="content2">
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
-                            <h4>Domains</h4>
-                            <p>Your site will work with any domain name you own. You can also buy a domain name from us or choose our business plan and get a domain for free. </p>
+                            <h4>Domínios</h4>
+                            <p>O seu site irá funcionar com qualquer nome de domínio que você já tenha. Você também pode comprar um domínio com a gente ou escolher um pacote Negócios e ganhar o domínio grátis.</p>
                         </div> 
                     </div>
                  </li>
@@ -94,11 +79,12 @@
                     <div>
                         <img class="magnify" src="{{asset('images/feature-magnify-1.png')}}">
                         <div class="call-out">
-                            <h4>Templates</h4>
-                            <p>Only fresh, modern designs are good enough for template library. Our professional designers add new template designs every 2 weeks. Change your template any time to give your site a whole new look.</p>
+                            <h4>Modelos de site</h4>
+                            <p>Apenas designs novos e modernos são bons o suficiente para a nossa biblioteca de modelos de site. Os nossos designers profissionais adicionam novos designs de modelos de site a cada 2 semanas. Altere o seu modelo de site a qualquer momento para dar ao seu site uma nova cara.</p>
                         </div> 
                     </div>
-                </li>                 
+                </li>
+#}
              </ul>
         </div>
     </div>
@@ -111,28 +97,28 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <div class="line-block pad-top">
-                        <h2>A free one page site</h2>
-                        <h3>Create a site and check it out on your phone and tablet. No credit card required.</h3>
+                        <h2>Um site grátis de uma página</h2>
+                        <h3>Crie um site e veja como ele aparece no seu celular ou tablet. Sem necessidade e cartão de crédito.</h3>
                     </div>
                 </div>
                 <div class="column span-three-middle">
                     <div class="line-block pad-top">
-                        <h2>Free support</h2>
-                        <h3>Got some questions? Our team of in-house experts have got all the answers.</h3>
+                        <h2>Suporte Grátis</h2>
+                        <h3>Tem alguma dúvida? Nosso time de experts in-house tem todas as respostas.</h3>
                     </div>
                 </div>
                 <div class="column span-three-right">
                     <div class="line-block pad-top">
-                        <h2>Use any domain name</h2>
-                        <h3>Select one of our paying plans and use your site with any domain name you like.</h3>
+                        <h2>Use qualquer nome de domínio</h2>
+                        <h3>Escolha um dos nossos planos de pagamento e use no seu site o domínio com o nome que quiser.</h3>
                     <div>
                 </div>
             </div>
         </div>
         <!-- SIGNUP BAR !-->
         <div class="signup-bar">
-            <a href="/pricing" class="btn pink lrg">try sitejam now</a>
-            <span>No credit card required.</span>
+            <a href="/pricing" class="btn pink lrg">Experimente o Sitejam agora</a>
+            <span>Não é necessário cartão de crédito.</span>
         </div>
     </div>
 </section>
@@ -144,8 +130,8 @@
             <!-- DESIGNS !-->
             <section class="grey designs">
                 <div class="wrapper sml">
-                    <h2 class="wht-shad">Every site looks great</h2>
-                    <h3 class="wht-shad">Our professional designers make sure that every site is something to be proud of. New designs are released every 2 weeks and included free with our business plan.</h3>
+                    <h2 class="wht-shad">Todos os sites ficam ótimos</h2>
+                    <h3 class="wht-shad">Os nossos designers proficionais te dão a certeza que qualquer site será algo para se orgulhar. Novos designs são lançados a cada 2 semana e estão inclusos no  nosso pacote Negócios.</h3>
                     <div class="template-slider">
                         <div class="controls">
                             <span></span>
@@ -163,17 +149,17 @@
             <!-- DEVICES !-->
             <section class="devices">
                 <div class="wrapper sml">
-                    <h2 class="pink">Mobile &amp; tablet site included</h2>
-                    <h3 class="white">We think everyone deserves a site that adapts to mobile and tablet devices. Change between full screen, mobile and tablet views without missing a beat. </h3>
+                    <h2 class="pink">Inclui sites para celular e tablet</h2>
+                    <h3 class="white">Acreditámos que todo mundo merce um site que se adpata também para celulares e tablets. Troque o modo de exibição entre full screen, celular ou tablet sem perder tempo.</h3>
                 </div>
                 <div class="tabs-2">
                     <div class="slide">
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
-                        <label for="tab-1">Mobile</label>
+                        <label for="tab-1">Celular</label>
                         <div class="tab-content sml">
                             <div class="iphone">
-                                <h4>Look both ways</h4>
-                                <p>Rotate each device 90 degress and see your content adapt instantly.</p>
+                                <h4>Veja em ambas as formas</h4>
+                                <p>Gire o seu dispositivo 90 graus e veja como o seu conteúdo se adapta rápidamente.</p>
                                 <img src="{{asset('images/mobile-img.png')}}">
                             </div>
                        </div> 
@@ -184,9 +170,9 @@
                        <div class="tab-content sml">
                             <div class="ipad clearfix">
                                 <hgroup>
-                                    <h4>Tablet view</h4>
-                                    <p class="desktop">Tablets are the fastest growing device for web browsing so it's important to check your site looks it's best.</p>
-                                    <p class="tablet">Tablets are the fastest growing device for web browsing.</p>
+                                    <h4>Visualização no tablet</h4>
+                                    <p class="desktop">Tablets são os dispositivos móveis que mais crescem para navegação na internet, então é importante checar como o seu site está neste dispositivo.</p>
+                                    <p class="tablet">Tablets são os dispositivos móveis que mais crescem para navegação na internet.</p>
                                 </hgroup>
                                 <img src="{{asset('images/ipad.png')}}">
                             </div>
@@ -205,8 +191,8 @@
             <!-- WIDGETS !-->
             <section class="widgets clearfix">
                 <div class="wrapper sml">
-                    <h2>Twitter, Facebook and more</h2>
-                    <h3>Twitter and Facebook feeds are a great way to engage visitors to your site. You can also add maps, forms and many more items to any page.</h3>
+                    <h2>Twitter, Facebook e mais</h2>
+                    <h3>Twitter e Facebook são ótimas maneiras de engajar novos visitantes para o seu site. Você também pode adicionar mapas, formulários e muitos outros items na sua página.</h3>
 
                     <!-- WIDGET BLOCKS !-->
                     <ul class="widget-blocks clearfix">
@@ -215,10 +201,10 @@
                             <span>Google Maps</span>
                         </li>
                         <li class="pink gallery">
-                            <span>Image Gallery</span>
+                            <span>Galeria de imagens</span>
                         </li>
                         <li class="pink form last">
-                            <span>Contact Form</span>
+                            <span>Formulário de contato</span>
                         </li>
 
                         <!-- NAVY ROW !-->
@@ -226,10 +212,10 @@
                             <span>Slideshow</span>
                         </li>
                         <li class="navy columns">
-                            <span>Columns</span>
+                            <span>Colunas</span>
                         </li>
                         <li class="navy nav last">
-                            <span>Navigation</span>
+                            <span>Navegação</span>
                         </li>
 
                         <!-- BLUE ROW !-->
@@ -242,7 +228,7 @@
                         <li class="blue last">
                             <div class="view-all">
                                 <!-- <a href="#">View All</a> -->
-                                <a>and more</a>
+                                <a>e mais</a>
                             </div>
                         </li>
                     </ul>
@@ -253,23 +239,23 @@
             <!-- WEBSITE !-->
             <section class="website grey">
                 <div class="wrapper sml">
-                    <h2 class="wht-shad">Built for busy people</h2>
-                    <h3 class="wht-shad">Sitejam won't slow you down with any technical stuff you don't care about. Just choose a design, add content and you're ready to publish a great site.</h3>
+                    <h2 class="wht-shad">Feito para pessoas ocupadas</h2>
+                    <h3 class="wht-shad">Sitejam não vai te atrapalhar com coisas técnicas que não te interessam. Apenas escolha o seu design, adicione o conteúdo e você já esta pronto para por o seu site no ar.</h3>
                     <a class="popup-youtube video-block" href="http://www.youtube.com/watch?v=wFEhqtHT-78">
                         <img src="{{asset('/images/video.png')}}"> 
                         <div>
-                            <p class="text-link">Watch the video tour</p>
+                            <p class="text-link">Assista ao nosso tour</p>
                         </div>
                     </a>
                     <div class="divider"></div>
                     <ul>
                         <li>
-                            <h4>A site that grows with you</h4>
-                            <p>Start with a small site and grow it when the time is right for you. Add more pages, drop-down menus and additional content at anytime.</p>
+                            <h4>Um site que acompanha o seu crescimento</h4>
+                            <p>Comece com um pequeno site que pode crescer quando for melhor pra você. Adicione mais páginas, drop-down menus e mais conteúdo a qualquer tempo.</p>
                         </li>
                         <li>
-                            <h4>Easy publishing</h4>
-                            <p>Publishing your site takes just two clicks. There are no extra steps to make your site ready for mobile phones and tablets.</p>
+                            <h4>Fácil de publicar</h4>
+                            <p>Publicar o seu site so leva dois cliques. Não há medidas adicionais para deixar o seu site pronto para celulares e tablets.</p>
                         </li>
                     </ul>
                 </div>
@@ -281,8 +267,8 @@
 <!-- SIGNUP BAR !-->
 <div class="signup-bar pad">
     <div class="wrapper">
-        <a href="/pricing" class="btn pink lrg">Try Sitejam Free</a>
-        <span>No credit card required.</span>
+        <a href="/pricing" class="btn pink lrg">Experimente o Sitejam Grátis</a>
+        <span>Não é necessário cartão de crédito.</span>
     </div>
 </div>
 
