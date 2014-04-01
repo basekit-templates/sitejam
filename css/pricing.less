@@ -257,10 +257,13 @@ section {
                     text-align: left;
                 }
                 li {
+                	position: relative;
                     .p-font;
-                    line-height: 40px;
+                    line-height: 30px;
                     font-size: 16px;
-                    white-space: nowrap;
+                    //white-space: nowrap;
+                    padding-left: 20px;
+                    padding-bottom: 14px;
                     @media @tablet {
                         font-size: 14px;
                     }
@@ -270,7 +273,10 @@ section {
                     }
                     i {
                         color: @color-swatch4;
-                        margin-right: 30px;
+                        //margin-right: 30px;
+                        position: absolute;
+                        top: 6px;
+                        left: 0;
                         @media @desktopSml {
                             margin-right: 12px;
                         }
