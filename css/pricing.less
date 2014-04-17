@@ -2,6 +2,70 @@
    PRICING PAGE
    =============================== */
 
+// Top Pricing 
+.feature {
+    &.title-bar {
+        &.pricing {
+            .currency-switcher {
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                @media @tablet {
+                    top: 15px;
+                    right: 15px;
+                }
+                @media @mobile {
+                    top: inherit;
+                    bottom: 0;
+                    right: 0;
+                    margin-right: -2px;
+                    margin-bottom: -2px;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 45%;
+                    right: 15px;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid #fff;
+                    @media @tablet {
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        border-top: 4px solid #fff;
+                        top: 47%;
+                    }
+                }
+            }
+            span {
+                color: #c0eef0;
+            }
+            select {
+                -webkit-appearance: none;
+                background: transparent;
+                border: 2px solid #63dadd;
+                outline: none;
+                padding: 15px 28px 15px 15px;
+                .border-radius(0);
+                cursor: pointer;
+                font-family: 'effra';
+                font-size: 13px;
+                color: #fff;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                @media @tablet {
+                    padding: 10px 23px 10px 10px;
+                    font-size: 12px;
+                }
+                @media @mobile {
+                    border-bottom: 0;
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}
+
 section {
     .pricing-table {
         margin: 5em 0 0;
