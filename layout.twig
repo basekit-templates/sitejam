@@ -105,7 +105,7 @@
 	</script>
 
 	<script type="text/javascript">
-	function toggleSlides(){
+	function toggleSlides() {
 		$('.toggler').click(function(e){
 			var id=$(this).attr('id');
 			var widgetId=id.substring(id.indexOf('-')+1,id.length);
@@ -118,10 +118,37 @@
 			});
 		});
 	};
+
 	$(function(){
 		toggleSlides();
 	});
 	</script>
+
+	<script type="text/javascript">
+	var prices = {
+		"gbp": [0, 7, 12],
+		"eur": [0, 8, 15]
+	}
+
+	$('.currency-switcher select').change(function () {
+		console.log($('.launch-price').length);
+		switch(this.value) {
+
+		case 'gbp':
+			$('.launch-price').text('£' + prices.gbp[0]);
+			$('.basic-price').text('£' + prices.gbp[1]);
+			$('.business-price').text('£' + prices.gbp[2]);
+			break;
+		case 'eur':
+			$('.launch-price').text('€' + prices.eur[0]);
+			$('.basic-price').text('€' + prices.eur[1]);
+			$('.business-price').text('€' + prices.eur[2]);
+			break;
+		}
+	});
+	</script>
+
+	
 
 
 </body>
