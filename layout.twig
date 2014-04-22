@@ -118,12 +118,40 @@
 			});
 		});
 	};
+
 	$(function(){
 		toggleSlides();
 	});
 	</script>
 
+    <script type="text/javascript">
+    var prices = {
+        "gbp": [0, 7, 12],
+        "real": [0, 25, 45],
+        "eur": [0, 9, 15]
+    }
 
+    $('.currency-switcher select').change(function () {
+        switch(this.value) {
+
+        case 'gbp':
+            $('.launch-price').text('£' + prices.gbp[0]);
+            $('.basic-price').text('£' + prices.gbp[1]);
+            $('.business-price').text('£' + prices.gbp[2]);
+            break;
+        case 'real':
+            $('.launch-price').text('R$' + prices.real[0]);
+            $('.basic-price').text('R$' + prices.real[1]);
+            $('.business-price').text('R$' + prices.real[2]);
+            break;
+        case 'eur':
+            $('.launch-price').text('€' + prices.eur[0]);
+            $('.basic-price').text('€' + prices.eur[1]);
+            $('.business-price').text('€' + prices.eur[2]);
+            break;
+		}
+	});
+	</script>
 </body>
 </html>
 
