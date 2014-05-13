@@ -126,17 +126,17 @@
 
     <script type="text/javascript">
     var prices = {
-        "gbp": [0, 7, 12],
         "real": [0, 25, 45],
+        "usd": [0, 10, 19],
         "eur": [0, 9, 15]
     }
 
     $('.currency-switcher select').change(function () {
         switch(this.value) {
-        case 'gbp':
-            $('.launch-price').text('£' + prices.gbp[0]);
-            $('.basic-price').text('£' + prices.gbp[1]);
-            $('.business-price').text('£' + prices.gbp[2]);
+        case 'usd':
+            $('.launch-price').text('$' + prices.usd[0]);
+            $('.basic-price').text('$' + prices.usd[1]);
+            $('.business-price').text('$' + prices.usd[2]);
             break;
         case 'real':
             $('.launch-price').text('R$' + prices.real[0]);
