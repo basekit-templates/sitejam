@@ -137,11 +137,6 @@
 	$('.currency-switcher select').change(function () {
 		switch(this.value) {
 
-		case 'gbp':
-			$('.launch-price').text('£' + prices.gbp[0]);
-			$('.basic-price').text('£' + prices.gbp[1]);
-			$('.business-price').text('£' + prices.gbp[2]);
-			break;
 		case 'eur':
 			$('.launch-price').text('€' + prices.eur[0]);
 			$('.basic-price').text('€' + prices.eur[1]);
@@ -166,6 +161,11 @@
 			$('.launch-price').text('AU$ ' + prices.ard[0]);
 			$('.basic-price').text('AU$ ' + prices.ard[1]);
 			$('.business-price').text('AU$ ' + prices.ard[2]);
+			break;
+		case 'col':
+			$('.launch-price').text('$' + prices.col[0]);
+			$('.basic-price').text('$' + prices.col[1]);
+			$('.business-price').text('$' + prices.col[2]);
 			break;
 		}
 	});
