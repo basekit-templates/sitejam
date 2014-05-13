@@ -126,8 +126,12 @@
 
 	<script type="text/javascript">
 	var prices = {
-		"gbp": [0, 7, 12],
-		"eur": [0, 8, 15]
+		"eur": [0, 8, 14],
+		"mxn": [0, 150, 250],
+		"usd": [0, 10, 19],
+		"pru": [0, 30, 60],
+		"ard": [0, 100, 150],
+		"col": [0, '20,000', '40,000']
 	}
 
 	$('.currency-switcher select').change(function () {
@@ -142,6 +146,26 @@
 			$('.launch-price').text('€' + prices.eur[0]);
 			$('.basic-price').text('€' + prices.eur[1]);
 			$('.business-price').text('€' + prices.eur[2]);
+			break;
+		case 'mxn':
+			$('.launch-price').text('MXN ' + prices.mxn[0]);
+			$('.basic-price').text('MXN ' + prices.mxn[1]);
+			$('.business-price').text('MXN ' + prices.mxn[2]);
+			break;
+		case 'usd':
+			$('.launch-price').text('$/ ' + prices.usd[0]);
+			$('.basic-price').text('$/ ' + prices.usd[1]);
+			$('.business-price').text('$ ' + prices.usd[2]);
+			break;
+		case 'pru':
+			$('.launch-price').text('S/ ' + prices.pru[0]);
+			$('.basic-price').text('S/ ' + prices.pru[1]);
+			$('.business-price').text('S/ ' + prices.pru[2]);
+			break;
+		case 'ard':
+			$('.launch-price').text('AU$ ' + prices.ard[0]);
+			$('.basic-price').text('AU$ ' + prices.ard[1]);
+			$('.business-price').text('AU$ ' + prices.ard[2]);
 			break;
 		}
 	});
