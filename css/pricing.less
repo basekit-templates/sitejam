@@ -7,9 +7,12 @@
     &.title-bar {
         &.pricing {
             .currency-switcher {
+                border: 2px solid #63DADD;
                 position: absolute;
+                overflow: hidden;
                 right: 30px;
                 top: 30px;
+                width: 170px;
                 @media @tablet {
                     top: 15px;
                     right: 15px;
@@ -19,7 +22,6 @@
                     bottom: 0;
                     right: 0;
                     margin-right: -2px;
-                    margin-bottom: -2px;
                 }
                 &:after {
                     content: '';
@@ -43,9 +45,10 @@
             select {
                 -webkit-appearance: none;
                 background: transparent;
-                border: 2px solid #63dadd;
+                border: none;
                 outline: none;
-                padding: 15px 28px 15px 15px;
+                padding: 15px 60px 15px 15px;
+                margin-right: -40px;
                 .border-radius(0);
                 cursor: pointer;
                 font-family: 'effra';
@@ -53,17 +56,19 @@
                 color: #fff;
                 letter-spacing: 3px;
                 text-transform: uppercase;
+                -moz-appearance: none;
+                text-indent: 0.01px;
+                text-overflow: '';
                 @media @tablet {
-                    padding: 10px 23px 10px 10px;
                     font-size: 12px;
                 }
                 @media @mobile {
                     border-bottom: 0;
                     border-right: 0;
                 }
-            }
-            option {
-	            background-color: @color-swatch4;
+                option {
+                    color: black;
+                }
             }
         }
     }
