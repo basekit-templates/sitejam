@@ -376,6 +376,12 @@ section {
         @media @mobileSml {
             padding: 2.6em 0 0;
         }
+        .wrapper {
+            @media @desktopSml {
+                margin: 0 5%;
+                width: 90%;
+            }
+        }
         h2 {
             font-size: 44px;
             color: @color-swatch1;
@@ -421,7 +427,6 @@ section {
         }
         img {
             position: relative;
-            bottom: -4px;
         }
         .tabs {
             position: relative;
@@ -430,7 +435,6 @@ section {
                 margin: 2em 0 0;
             }
             label {
-
                 font-family: 'tradegothic';
                 text-align: center;
                 position: relative;
@@ -455,7 +459,7 @@ section {
                 }
                 @media @mobile {
                     display: block;
-                    width: 40%;
+                    width: 80%;
                     margin: 1em auto;
                     text-align: center;
                 }
@@ -524,24 +528,33 @@ section {
                     }
                     @media @desktopSml {
                         margin-top: 2.3em;
-                        min-width: 600px;
-                        height: 356px;
+                        min-width: 700px;
+                        height: 408px;
                     }
                     @media @mobile {
-                        margin: 3em auto 0;
-                        min-width: 512px;
-                        height: 309px;
+                        margin: 3em 0;
+                        min-width: initial;
+                        height: 400px;
+                        width: 100%;
                     }
                     @media @mobileSml {
                         min-width: 100%;
-                    }
+                    }     
+                    @media only screen and (max-width: 620px) {  
+                        height: 292px;
+                    }         
                 }
+
                 li {
                     position: absolute;
-                    top: 0;
-                    left: 0;
                     width: 100%;
+                    visibility: hidden;
                     opacity: 0;
+                    transition: visibility 0s 1s, opacity 1s linear;
+                    .call-out {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
                 }
                 .controls {
                     margin-left: 8px;
@@ -565,60 +578,25 @@ section {
                         }
                     }
                 }
-                .magnify { 
-                    float: left;
-                    left: -25px;
-                    top: 91px;
-                    @media @tablet {
-                        left: -21px;
-                        top: 81px;
-                        width: 36%;
-                    }
-                    @media @desktopSml {
-                        left: -19px;
-                        top: 67px;
-                        width: 38%;
-                    }
-                    @media @mobile {
-                        left: -13px;
-                        top: 58px;
-                        width: 34%;
-                    }
-                    @media @mobileSml {
-                        width: 73%;
-                    }
-                }
                 .call-out {
-                    float : left;
                     text-align: left;
-                    left: 20px;
                     width: 250px;
                     padding: 26px;
-                    margin-top: 150px;
-                    position: relative;
+                    position: absolute;
                     border-radius: 8px;
                     -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
                     -moz-box-shadow:    inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
                     box-shadow:         inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
                     background-color: #fff;
-                    @media @tablet {
-                        margin-top: 120px;
-                    }
                     @media @desktopSml {
-                        margin-top: 83px;
+                        padding: 20px;
                     }
-                    @media @mobile {
-                        padding: 18px;
-                        margin-top: 74px;
-                    }
-                    @media @mobileSml {
+                    @media only screen and (max-width: 620px) {
                         display: none;
                         width: 100%;
                         .box-sizing;
                         background-color: @color-swatch2;
                         border-top: 1px solid @color-swatch4;
-                        left: 0;
-                        margin-top: 92px;
                         .border-radius(0);
                         -webkit-border-bottom-right-radius: 5px;
                         -webkit-border-bottom-left-radius: 5px;
@@ -689,34 +667,87 @@ section {
     -o-transform: none;
     transform: none;
     height: 476px; 
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
     @media @tablet {
         .bg-cover;
         height: 416px;
     }
     @media @desktopSml {
-        height: 344px;
+        height: 396px;
     }
     @media @mobile {
-        height: 297px;
+        height: 388px; 
+    }
+    @media only screen and (max-width: 620px) {
+        height: 280px;
+    }
+    .call-out {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s linear;
     }
 }
 .tabs > .content1:checked ~ ul > .content1 {
-    background-image: image('/images/feature-tab-bg1.jpg');
+    background-image: image('/images/feature-tab-1.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    width: 100%;  
+    width: 100%; 
+    .call-out {
+        right: 185px;
+        top: 125px;
+        @media @tablet {
+            right: 115px;
+            top: 98px;
+        }
+        @media only screen and (max-width: 768px) {
+            right: 40px;
+        }
+        @media only screen and (max-width: 690px) {
+            right: -20px;
+        }
+    } 
 }
 .tabs > .content2:checked ~ ul > .content2 {
-    background-image: image('/images/feature-tab-bg1.jpg');
+    background-image: image('/images/feature-tab-2.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
     width: 100%; 
+    .call-out {
+        right: 170px;
+        top: 92px;
+        @media @tablet {
+            right: 100px;
+            top: 72px;
+        }
+        @media only screen and (max-width: 768px) {
+            right: 30px;
+        }
+        @media only screen and (max-width: 690px) {
+            right: -20px;
+        }
+    }
 }
 .tabs > .content3:checked ~ ul > .content3 {
-    background-image: image('/images/feature-tab-bg1.jpg');
+    background-image: image('/images/feature-tab-3.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
     width: 100%; 
+    .call-out {
+        right: 170px;
+        top: 100px;
+        @media @tablet {
+            right: 100px;
+            top: 80px;
+        }
+        @media only screen and (max-width: 768px) {
+            right: 30px;
+        }
+        @media only screen and (max-width: 690px) {
+            right: -20px;
+        }
+    }
 }
 
 
