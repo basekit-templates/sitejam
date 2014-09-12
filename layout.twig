@@ -128,10 +128,9 @@
 
 	<script type="text/javascript">
     var prices = {
-        "gbp": [0, 7, 12],
-        "aud": [0, 25, 45],
-        "usd": [0, 10, 19],
-        "eur": [0, 9, 15]
+        "gbp": [1, 5, 10],
+        "usd": [1, 8, 16],
+        "eur": [1, 6, 13]
     }
 
     $('.currency-switcher select').change(function () {
@@ -145,11 +144,6 @@
             $('.launch-price').text('£' + prices.gbp[0]);
             $('.basic-price').text('£' + prices.gbp[1]);
             $('.business-price').text('£' + prices.gbp[2]);
-            break;
-        case 'aud':
-            $('.launch-price').text('AUD$' + prices.aud[0]);
-            $('.basic-price').text('AUD$' + prices.aud[1]);
-            $('.business-price').text('AUD$' + prices.aud[2]);
             break;
         case 'eur':
             $('.launch-price').text('€' + prices.eur[0]);
