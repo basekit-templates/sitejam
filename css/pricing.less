@@ -193,7 +193,7 @@ section {
                 padding: 0;
                 display: block;
                 margin: 0 auto;
-                width: 67%;
+                width: 100%;
                 height: 60px;
                 line-height: 60px;
                 font-size: 17px;
@@ -287,6 +287,12 @@ section {
 
 section {
     &.pricing-content {
+        .wrapper {
+            @media @desktopSml {
+                margin: 0 5%;
+                width: 90%;
+            }
+        }
         .price-content {
             background-color: #fff;
             max-width: 372px;
@@ -301,6 +307,9 @@ section {
             -moz-border-radius-bottomleft: 5px;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
+            @media @laptop {
+                padding: 50px 12% 50px;
+            }
             @media @tablet {
                 padding: 50px 16% 50px;
             }
@@ -346,7 +355,10 @@ section {
                     }
                     i {
                         color: @color-swatch4;
-                        margin-right: 30px;
+                        margin-right: 20px;
+                        @media @laptop {
+                            margin-right: 15px;
+                        }
                         @media @desktopSml {
                             margin-right: 12px;
                         }
@@ -369,12 +381,3 @@ section {
 .show_hide {
     display:none;
 }
-
-
-
-
-
-
-
-
-
