@@ -857,6 +857,13 @@ section {
         form {
             label {
                 display: none;
+                &[for="persistent-login"] {
+                    display: inline;
+                    font-family: tradegothic;
+                    font-size: 15px;
+                    text-align: center;
+                    color: #fff;
+                }
             }
             input {
                 float: left;
@@ -876,6 +883,11 @@ section {
                 }
                 &:focus {
                     outline: none;
+                }
+                &[type=checkbox] {
+                    display: inline;
+                    float: none;
+                    width: auto;
                 }
             }
             button {
