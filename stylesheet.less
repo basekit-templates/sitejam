@@ -93,7 +93,7 @@ a {
 
 
 /* ===============================
-   CUSTOM LESS 
+   CUSTOM LESS
    =============================== */
 
 .border-radius(@radius) {
@@ -182,7 +182,7 @@ a {
            padding:0 0 0 20px;
            li {
                .p-font;
-               list-style-type: circle; 
+               list-style-type: circle;
             }
         }
         h3 {
@@ -264,7 +264,7 @@ header {
                 padding: 0 0 0 30px;
                 margin: 10px 0 0 25px;
             }
-            @media @mobile { 
+            @media @mobile {
                 margin: 10px 0 0 0px;
             }
             .dl-menu {
@@ -481,7 +481,7 @@ section {
                         -webkit-border-radius: 60px;
                         -moz-border-radius: 60px;
                         border-radius: 60px;
-                        
+
                     }
                 }
             }
@@ -539,10 +539,10 @@ section {
                     }
                     @media @mobileSml {
                         min-width: 100%;
-                    }     
-                    @media only screen and (max-width: 620px) {  
+                    }
+                    @media only screen and (max-width: 620px) {
                         height: 292px;
-                    }         
+                    }
                 }
 
                 li {
@@ -641,7 +641,7 @@ section {
                         }
                     }
                 } /* close callout */
-            } /* close ul */            
+            } /* close ul */
         } /* close tabs */
 
         &.page-title {
@@ -666,7 +666,7 @@ section {
     -moz-transform: none;
     -o-transform: none;
     transform: none;
-    height: 476px; 
+    height: 476px;
     visibility: visible;
     opacity: 1;
     transition: opacity 1s linear;
@@ -678,7 +678,7 @@ section {
         height: 396px;
     }
     @media @mobile {
-        height: 388px; 
+        height: 388px;
     }
     @media only screen and (max-width: 620px) {
         height: 280px;
@@ -693,7 +693,7 @@ section {
     background-image: image('/images/feature-tab-1.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    width: 100%; 
+    width: 100%;
     .call-out {
         right: 130px;
         top: 88px;
@@ -708,13 +708,13 @@ section {
             right: -25px;
             width: 230px;
         }
-    } 
+    }
 }
 .tabs > .content2:checked ~ ul > .content2 {
     background-image: image('/images/feature-tab-2.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    width: 100%; 
+    width: 100%;
     .call-out {
         right: 150px;
         top: 105px;
@@ -735,7 +735,7 @@ section {
     background-image: image('/images/feature-tab-3.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    width: 100%; 
+    width: 100%;
     .call-out {
         right: 150px;
         top: 108px;
@@ -789,7 +789,7 @@ section {
         height: 332px;
         position: absolute;
         left: 50%;
-        top: 40%; 
+        top: 40%;
         margin-left: -150px;
         margin-top: -150px;
         @media @mobile {
@@ -997,7 +997,7 @@ section {
     background-image: image('/images/loader.png');
     background-position: center center;
     background-repeat: no-repeat;
-   
+
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
     outline: 9999px solid rgba(0,0,0,0.5);
@@ -1075,7 +1075,7 @@ section {
         margin-left: 30px;
         -webkit-font-smoothing: antialiased;
         @media @tablet {
-            font-size: 21px;        
+            font-size: 21px;
         }
         @media @mobile {
             display: block;
@@ -1091,7 +1091,7 @@ section {
                 border-bottom: 1px solid @color-swatch2;
             }
         }
-    } 
+    }
 }
 
 
@@ -1109,7 +1109,7 @@ section {
                 .border-radius(5px);
                 max-width: 536px;
                 padding: 0;
-                margin: 5em 0 0; 
+                margin: 5em 0 0;
                 -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
                 box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
                 @media @tablet {
@@ -1170,7 +1170,7 @@ section {
                 }
             }
             .tabs-2 {
-                position: relative;   
+                position: relative;
                 min-height: 464px; /* This part sucks */
                 margin: 35px 0 0;
                 @media @tablet {
@@ -1208,7 +1208,7 @@ section {
                     }
                 }
                 [type=radio] {
-                    display: none;    
+                    display: none;
                 }
                 .tab-content {
                     position: absolute;
@@ -1314,6 +1314,101 @@ section {
   opacity: 1;
   left: 0;
 }
+
+
+
+
+/* ===============================
+   BLOG/ECOMMERCE
+   =============================== */
+
+section {
+    &.blog-ecom {
+
+
+        // BLOG
+        // -------------------
+
+        .blog {
+            padding: 6em 0;
+
+            @media @tablet {
+                padding: 4em 0;
+            }
+            @media @mobile {
+                padding: 3em 0;
+            }
+
+
+            ul {
+                padding-top: 4em;
+
+                @media @mobile {
+                    padding: 3em 0;
+                }
+
+                // FEATURES LIST
+                li {
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    padding-bottom: 2em;
+
+                    h3 {
+                        display: inline-block;
+                    }
+
+                    &:before {
+                        content: "";
+                        width: 80px;
+                        height: 50px;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+
+                    // ICONS
+                    //--------------------
+
+                    &.blogging:before {
+                        background-image: image('/images/blog-ecom/blog-icon.svg');
+                        background-size: 60%;
+                    }
+
+                    &.share:before {
+                        background-image: image('/images/blog-ecom/share-icon.svg');
+                        background-size: 60%;
+                    }
+
+                    &.shout:before {
+                        background-image: image('/images/blog-ecom/megaphone-icon.svg');
+                        background-size: 70%;
+                    }
+
+                    @media @mobile {
+                        text-align: center;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
+
+        // ECOM
+        // -------------------
+
+        .ecom {
+            img {
+                margin: 4em 0 0 -26px;
+            }
+        }
+
+    }
+
+}
+
 
 /* ===============================
    WIDGETS
@@ -1695,8 +1790,8 @@ footer {
  */
 .mfp-fade.mfp-bg {
     opacity: 0;
-    -webkit-transition: all 0.15s ease-out; 
-    -moz-transition: all 0.15s ease-out; 
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -1708,8 +1803,8 @@ footer {
 
 .mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
-    -webkit-transition: all 0.15s ease-out; 
-    -moz-transition: all 0.15s ease-out; 
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
