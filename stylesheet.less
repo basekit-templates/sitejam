@@ -1400,6 +1400,55 @@ section {
         // -------------------
 
         .ecom {
+
+            .template-slider {
+                background: #fff;
+                .border-radius(5px);
+                max-width: 536px;
+                padding: 0;
+                margin: 5em 0 0;
+                -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+                @media @tablet {
+                    margin: 3em 0 2em;
+                }
+                .controls {
+                    margin-left: 8px;
+                    height: 16px;
+                    @media @tablet {
+                        height: 13px;
+                    }
+                    span {
+                        display: inline-block;
+                        width: 4px;
+                        height: 4px;
+                        margin: 0 -1px 4px 0;
+                        .border-radius(50%);
+                        border: 1px solid @color-swatch3;
+                        vertical-align: middle;
+                        @media @tablet {
+                            height: 3px;
+                            width: 3px;
+                            margin: 0 -1px 8px 0;
+                        }
+                    }
+                }
+                .slides {
+                    .slide {
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                        .bg-cover;
+                        min-height: 372px;
+                        @media @tablet {
+                            min-height: 250px;
+                        }
+                        &.two {
+                            background-image: image('/images/blog-ecom/ecom-screenshot.jpg');
+                        }
+                    }
+                }
+            }
+
             img {
                 margin: 4em 0 0 -26px;
             }
